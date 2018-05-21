@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <script data-ionic="inject">
+    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.2';i.angular='5.0.3';i.staticDir='build/';})(window);
+  </script>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+    <link id="theme" rel="stylesheet" href="assets/skin/theme-sun.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4e8ef7">
+    <!--图片裁剪 AlloyCrop https://github.com/AlloyTeam/AlloyCrop-->
+    <script src="assets/lib/alloycrop/alloy-finger.js"></script>
+    <script src="assets/lib/alloycrop/transform.js"></script>
+    <script src="assets/lib/alloycrop/alloy-crop.js"></script>
+    <!-- cordova.js required for cordova apps -->
+    <script src="cordova.js"></script>
+
+    <!-- <link href="assets/video/video.css" rel="stylesheet">
+    <script src="assets/video/video.js"></script> -->
+
+
+    <link rel="stylesheet" href="assets/video/hivideo.css" />
+    <script type="text/javascript" src="assets/video/hivideo.js"></script>
+    <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  </script>-->
+    <!-- <link href="build/main.css" rel="stylesheet"> -->
+    <script>
+        document.write("<link rel='stylesheet' href='build/main.css?v=" + Math.random() + "'>");
+    </script>
+</head>
+
+<body>
+    <!-- Ionic's root component and where the app will load -->
+    <ion-app></ion-app>
+
+    <!-- The polyfills js is generated during the build process -->
+    <!-- <script  src='build/polyfills.js'></script> -->
+    <script>
+        document.write("<script type='text/javascript' src='build/polyfills.js?v=" + Math.random() + "'><\/script>");
+    </script>
+    <script>
+        document.write("<script type='text/javascript' src='build/vendor.js?v=" + Math.random() + "'><\/script>");
+    </script>
+    <script>
+        document.write("<script type='text/javascript' src='build/main.js?v=" + Math.random() + "'><\/script>");
+    </script>
+    <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+    <!-- <script  src="build/vendor.js"></script> -->
+    <!-- The bundle js is generated during the build process -->
+    <!-- <script  src="build/main.js"></script> -->
+</body>
+
+</html>

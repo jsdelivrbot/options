@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons start>
+            <button ion-button icon-only (click)="closeModal()">
+                <ion-icon name="ios-arrow-back-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>搜索股票</ion-title>
+    </ion-navbar>
+    <ion-toolbar no-border-top>
+        <ion-searchbar [showCancelButton]="shouldShowCancel" placeholder="请输入股票代码/简拼" (ionInput)="getItems($event)"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="search_wrap">
+
+    </div>
+    <div *ngIf="show1" class=" hot_stock search_stock">
+        <table>
+            <tr>
+                <td>股票名称</td>
+                <td>股票代码</td>
+                <td></td>
+            </tr>
+            <tr (click)="choose(x)" *ngFor='let x of searData'>
+                <td>{{x.stockName}}</td>
+                <td>{{x.stockCode}}</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="!show1" class="hot_stock">
+        <img src="assets/images/trade/buy_search_icon_1@{{dpr}}x.png">
+        <p class="p1">热门股票</p>
+        <table>
+            <tr>
+                <td>股票名称</td>
+                <td>股票代码</td>
+                <td>涨幅</td>
+            </tr>
+            <tr (click)="choose(x)" *ngFor="let x of hotData">
+                <td>{{x.stockName}}</td>
+                <td>{{x.stockCode}}</td>
+                <td>{{x.riseRate}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="!show1&&recordData.length!=0" class="hot_stock record_stock">
+        <img src="assets/images/trade/buy_search_icon_2@{{dpr}}x.png">
+        <p class="p1">搜索记录</p>
+        <table>
+            <tr (click)="choose(x)" *ngFor='let x of recordData'>
+                <td>{{x.stockName}}</td>
+                <td>{{x.stockCode}}</td>
+                <td></td>
+            </tr>
+        </table>
+        <ion-item (click)="clearRecord()">清除搜索记录</ion-item>
+    </div>
+
+</ion-content>

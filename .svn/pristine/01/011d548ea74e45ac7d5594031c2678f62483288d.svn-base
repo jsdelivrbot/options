@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\27.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6f209b73a488f358673f39317df394bd7a99c05e">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-27.1.0_03b23c3915c073782ed7337410b627dc5bd11fac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\27.1.0\39ded76b5e1ce1c5b2688e1d25cdc20ecee32007\support-annotations-27.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="39ded76b5e1ce1c5b2688e1d25cdc20ecee32007">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\support-annotations-27.1.0_b3f91283b90c68f74ed4d9b797d191c31315ca58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\27.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3d46095629eedbd5b79b4d129428fc499473a73b">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-compat-27.1.0_b59c9ca7739ff0e3d30173d928b4661c24f13528.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\org.apache.cordova\CordovaLib\6.3.0\debug\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="df1a7a6af20c4eca090c1f535b77951ef6025bfb">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-6.3.0-debug_740ff8e5ba069706f6b4deeba0bb0fe0061521a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.1.0\8007981f7d7540d89cd18471b8e5dcd2b4f99167\common-1.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8007981f7d7540d89cd18471b8e5dcd2b4f99167">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\common-1.1.0_75cbc4eaca4528ac90aef7d0998fffb5ffc4492f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\android.arch.lifecycle\livedata-core\1.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8a9fd7c97f1d13f97f3b52f9d2e54cd857d5acf9">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\android.arch.lifecycle-livedata-core-1.1.0_b0a0832e4c2c46b9dc8d9362dd98967c3b53ba7e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\android.arch.core\runtime\1.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="71d380aeac037e63bab7bda2ba211777e16a2f42">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\android.arch.core-runtime-1.1.0_4a8d9c528409b6a855c10117508f1a5c2e9a5d84.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\libs\jpush-android-3.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="989c1fc762c0424b2e25692444e9f1df60288a1d">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\jpush-android-3.1.1_e70130e58aa44cbb83b8fb35b37a7741e9905be4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\libs\jcore-android-1.1.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d36b4154d952a6f18fd438469929820a6e598127">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\jcore-android-1.1.9_f56b165a61333e810a7be4a0ad7db027e3ba7e61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\27.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fe6c8fbfeeb1454c3eb605c9b66662991681fd55">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-27.1.0_23827cc67b2c01acfb8a33963d557e347145fdb2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\27.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="668473027f40fa0cdd5b2db78ba02d676ffd3a2b">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-27.1.0_b01aea42b25676785ea9cbdd482fca9faeed9fce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\libs\sqlite-connector.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="76169ab23a4f939925491c6fe186749da5a56ee9">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\sqlite-connector_d7928382f9579303dc02a6eca89a5f6485ae4b24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\android.arch.lifecycle\viewmodel\1.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1fd3ceac7f415975323d52c6c6057db409a907f6">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\android.arch.lifecycle-viewmodel-1.1.0_d3927e7c0cf963b5b2c943d77de5f741e2007ff3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\27.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9a2ea9818b2f556b6663c0e7376bd664ee6c7550">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-27.1.0_76ef956cb77843a6742533d72c3b4f2dc8ad5848.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.1.0\edf3f7bfb84a7521d0599efa3b0113a0ee90f85\common-1.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0edf3f7bfb84a7521d0599efa3b0113a0ee90f85">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\common-1.1.0_e1c9ce31feca42439a589af20277823507a5affa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\android.arch.lifecycle\runtime\1.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e2bbe48deed35056023eed2cdc0cc92e5c7d3617">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\android.arch.lifecycle-runtime-1.1.0_78ee845dc1a60aa13baadd531f9c04e1124ea1ad.jar" />
+    </item>
+
+</items>

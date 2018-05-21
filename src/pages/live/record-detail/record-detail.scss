@@ -1,0 +1,174 @@
+page-record-detail {
+    .back_img {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 2rem;
+        left: 1rem;
+        z-index: 8;
+    }
+    .ld_wrap {
+        width: 100%;
+        height: 19.17rem;
+        position: relative;
+        &>div {
+            width: 100%;
+            height: 100%;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .ld_title {
+        font-family: PingFangSC-Medium;
+        font-size: 1.25rem;
+        color: #333333;
+        letter-spacing: 0;
+        padding: 0.83rem 1.25rem;
+    }
+    .ld_tip {
+        width: 100%;
+        height: 4rem;
+        box-shadow: 0 1px 0 0 #CCCCCC;
+        position: relative;
+        .avatar {
+            position: absolute;
+            width: 2.08rem;
+            height: 2.08rem;
+            top: 0.83rem;
+            left: 1.25rem;
+        }
+        .author {
+            position: absolute;
+            top: 1.2rem;
+            left: 1.25rem;
+            font-family: PingFangSC-Regular;
+            font-size: 1.2px;
+            color: #999999;
+            letter-spacing: 0;
+            img {
+                position: relative;
+                top: 0.2rem;
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+        .audience {
+            position: absolute;
+            top: 1.21rem;
+            right: 1.25rem;
+            font-family: PingFangSC-Regular;
+            font-size: 1rem;
+            color: #999999;
+            letter-spacing: 0;
+            img {
+                position: relative;
+                top: 0.2rem;
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+    .ld_comment {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        overflow-y: scroll;
+        .ld_tit {
+            text-align: left;
+            font-family: PingFangSC-Regular;
+            font-size: 1.2rem;
+            color: #999999;
+            letter-spacing: 0;
+            padding: 0.42rem 1.25rem;
+            text-align: left;
+        }
+        .other_speak {
+            width: 92%;
+            display: flex;
+            margin: 0 auto;
+            text-align: left;
+            margin-top: 0.83rem;
+            &>div:nth-child(1) {
+                width: 12%;
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 50%;
+                }
+            }
+            &>div:nth-child(2) {
+                margin-left: 0.83rem;
+                &>div {
+                    width: 100%;
+                    height: 3rem;
+                    position: relative;
+                    p {
+                        position: absolute;
+                        font-family: PingFangSC-Regular;
+                        font-size: 1.2rem;
+                        color: #999999;
+                        letter-spacing: 0;
+                    }
+                    p:nth-child(1) {
+                        left: 0;
+                    }
+                    p:nth-child(2) {
+                        right: 0;
+                    }
+                }
+                p {
+                    font-family: PingFangSC-Regular;
+                    font-size: 1.2rem;
+                    color: #333333;
+                    letter-spacing: 0;
+                }
+            }
+        }
+        .my_speak {
+            &>div:nth-child(1) {
+                p {
+                    color: #FF4C52!important;
+                }
+            }
+        }
+    }
+    .fix_wrap {
+        background: white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        .foot_wrap {
+            height: 4rem;
+            width: 100%;
+            position: relative;
+            border-top: 1px solid #CCCCCC;
+            input {
+                background: #F8F8F8;
+                border: 1px solid #EEEEEE;
+                border-radius: 0.5rem;
+                position: absolute;
+                width: 78.7%;
+                height: 2.5rem;
+                left: 1.25rem;
+                top: 0.75rem;
+                padding-left: 1.25rem;
+            }
+            button {
+                background-image: linear-gradient(-135deg, #6FD9FF 0%, #6DB3FF 100%);
+                border-radius: 0.5rem;
+                width: 12%;
+                height: 2.5rem;
+                position: absolute;
+                right: 4%;
+                top: 0.75rem;
+                color: white;
+            }
+            button.activated {
+                background-image: linear-gradient(-135deg, rgb(73, 200, 247) 0%, rgb(58, 145, 238) 100%);
+            }
+        }
+    }
+}

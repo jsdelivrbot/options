@@ -1,0 +1,10 @@
+<ion-tabs *ngIf="globalData.showModule" #subTabs selectedIndex="0" tabsPlacement="top" id="tabs_special">
+    <ion-tab [root]="tab1Root" tabTitle="已生效"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="持仓"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="已结算"></ion-tab>
+    <!-- <ion-tab [root]="tab4Root" tabTitle="已撤回"></ion-tab> -->
+    <ion-tab [root]="tab5Root" tabTitle="已拒绝"></ion-tab>
+</ion-tabs>
+<!-- <ion-tabs *ngIf="!globalData.showModule" #subTabs selectedIndex="0" tabsPlacement="top" id="tabs_special">
+    <ion-tab [root]="tab1Root" tabTitle="行情"></ion-tab>
+</ion-tabs> -->

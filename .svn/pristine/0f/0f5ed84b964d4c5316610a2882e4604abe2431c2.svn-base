@@ -1,0 +1,177 @@
+page-purchase {
+    .scroll-content {
+        ._active {
+            background: white !important;
+            color: #3AA0F6 !important;
+            border: 1px solid #3AA0F6 !important;
+        }
+    }
+    em {
+        font-style: normal;
+        font-family: PingFangSC-Regular;
+        font-size: 1.25rem;
+        color: #999999;
+        letter-spacing: 2px;
+    }
+    .bot_p {
+        font-family: PingFangSC-Regular;
+        font-size: 1rem;
+        color: #999999;
+        letter-spacing: 2px;
+        padding: 1.25rem 1.42rem;
+    }
+    .mid_item {
+        img {
+            width: 1.63rem;
+            height: 1.63rem;
+        }
+        .mid_plus {
+            width: 10rem;
+            height: 2.08rem;
+            margin: 0 auto;
+            display: flex;
+            border-radius: 0.3rem;
+            overflow: hidden;
+            button {
+                width: 2.5rem;
+                height: 100%;
+                background: #3AA0F6;
+                font-family: PingFangSC-Regular;
+                font-size: 2rem;
+                color: #999999;
+                letter-spacing: 0;
+                color: white;
+            }
+            button.activated {
+                background: #1d89e2;
+            }
+            input {
+                width: 5rem;
+                height: 100%;
+                border-top: 1px solid #999999;
+                border-bottom: 1px solid #999999;
+                border-left: none;
+                border-right: none;
+                text-align: center;
+                background: white;
+            }
+        }
+    }
+    .item-ios {
+        border-bottom: 1px solid #c8c7cc;
+    }
+    .item-inner {
+        border-bottom: none!important;
+    }
+    ion-label {
+        font-family: PingFangSC-Regular!important;
+        font-size: 1.25rem!important;
+        letter-spacing: 2px!important;
+    }
+    .note-ios {
+        font-family: PingFangSC-Regular;
+        font-size: 1.25rem;
+        color: #999999;
+        letter-spacing: 2px;
+    }
+    .squar_but {
+        margin: 0!important;
+        border-radius: 0!important;
+        margin-left: 0.71rem!important;
+        border-radius: 0.3rem!important;
+        background: white;
+        border: 1px solid #999999;
+        color: #999999;
+        padding: 0.3rem 0.4rem;
+    }
+    ._footer {
+        display: flex;
+        width: 100%;
+        button {
+            width: 100%!important;
+            height: 4rem!important;
+            margin: 0!important;
+            border-radius: 0!important;
+            color: white;
+        }
+        .buyUp {
+            background-image: linear-gradient(-135deg, #36E6A6 0%, #22CE8F 100%);
+        }
+        .buyUp.activated {
+            background-image: linear-gradient(-135deg, #23e49d 0%, #14cc89 100%);
+        }
+        .buyDown {
+            background-image: linear-gradient(-134deg, #ff5c7d 0%, #FF4C52 100%);
+        }
+        .buyDown.activated {
+            background-image: linear-gradient(-134deg, #f3365c 0%, #f0232a 100%);
+        }
+    }
+    .modal_mock {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.50);
+        z-index: 100;
+    }
+    .top_wrap {
+        width: 92%;
+        margin: 0.83rem auto;
+        height: 5.83rem;
+        position: relative;
+        box-shadow: 0 6px 0.8rem 0 rgba(211, 211, 211, 0.50);
+        border-radius: 0.3rem;
+        .p1 {
+            font-family: PingFangSC-Medium;
+            font-size: 1.67rem;
+            color: #333333;
+            letter-spacing: 0;
+            position: absolute;
+            left: 1.25rem;
+            top: 1.17rem;
+            font-weight: bold;
+        }
+        .p2 {
+            font-family: PingFangSC-Medium;
+            font-size: 1.67rem;
+            color: #333333;
+            letter-spacing: 0;
+            position: absolute;
+            right: 1.25rem;
+            top: 1.17rem;
+            font-weight: bold;
+        }
+        .p3 {
+            font-family: PingFangSC-Medium;
+            font-size: 1.2rem;
+            color: #999999;
+            letter-spacing: 0;
+            position: absolute;
+            left: 1.25rem;
+            top: 3.5rem;
+        }
+        .p4 {
+            font-family: PingFangSC-Medium;
+            font-size: 1.2rem;
+            color: #999999;
+            letter-spacing: 0;
+            position: absolute;
+            right: 1.25rem;
+            top: 3.5rem;
+        }
+    }
+    .item_input {
+        width: 10rem;
+        height: 2.08rem;
+        border-radius: 0.3rem;
+        border: 1px solid #999999;
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 1.2rem;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 36px;
+    }
+}

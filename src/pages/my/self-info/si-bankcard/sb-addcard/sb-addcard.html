@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>添加银行卡</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <p class="tip_p">请绑定储蓄卡，此储蓄卡用于充值提现</p>
+    <ion-item style="font-size:1.25rem;">
+        <ion-label>开户银行</ion-label>
+        <ion-multi-picker placeholder="请选择您的银行卡" [(ngModel)]="choosedbank" item-content [multiPickerColumns]="bankdata"></ion-multi-picker>
+    </ion-item>
+    <ion-item style="font-size:1.25rem;">
+        <ion-label color="dark">所属支行</ion-label>
+        <ion-input placeholder="请输入开户银行所属支行" [(ngModel)]="branch "></ion-input>
+    </ion-item>
+    <ion-item style="font-size:1.25rem;">
+        <ion-label>所属省市</ion-label>
+        <ion-multi-picker placeholder="请选择开户银行所属省/市" [(ngModel)]="choosedplace" item-content [multiPickerColumns]="place"></ion-multi-picker>
+    </ion-item>
+    <form [formGroup]="passwordForm" (ngSubmit)="addCard(passwordForm.value)">
+        <ion-item style="font-size:1.25rem;height:4.5rem;">
+            <ion-label color="dark">卡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</ion-label>
+            <ion-input formControlName="banknumber" placeholder="请输入银行卡号" type="number"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.banknumber.valid && passwordForm.controls.banknumber.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!passwordForm.controls.banknumber.valid && passwordForm.controls.banknumber.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <br>
+        <br>
+        <button ion-button block type="submit" style="margin:0 auto;width:92%;height:3.33rem;" [disabled]="!passwordForm.valid||submitted||!choosedbank||!choosedplace||!branch ">确认添加</button>
+        <br>
+    </form>
+    <p class="sa_p1">为确保交易及资金安全，请务必填写真实信息！</p>
+    <p class="sa_p1">（提交绑卡信息后无法再修改）</p>
+
+</ion-content>

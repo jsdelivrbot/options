@@ -1,0 +1,38 @@
+page-register {
+    ._tittle {
+        font-family: PingFangSC-Medium;
+        font-size: 2.67rem;
+        color: #000000;
+        letter-spacing: 0;
+        font-weight: bold;
+        padding-bottom: 2rem;
+    }
+    .item-ios {
+        .item-inner {
+            border-bottom: 1px solid rgba(229, 229, 229, 0.7)!important;
+        }
+    }
+    .tip {
+        height: 1.67rem;
+        width: 100%;
+        position: relative;
+        padding-left: 4%;
+        p {
+            font-family: PingFangSC-Regular;
+            font-size: 1.17rem;
+            color: #999999;
+            letter-spacing: 2px;
+            padding-left: 6%;
+            .protocol {
+                font-style: normal;
+                color: #5C78C1;
+            }
+        }
+        .radio {
+            width: 1.17rem;
+            height: 1.17rem;
+            position: absolute;
+            top: 0.15rem;
+        }
+    }
+}

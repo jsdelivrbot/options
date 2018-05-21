@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>充值成功</title>
+</head>
+
+<body>
+    <script>
+        //测试地址  http://www.xinj5.top:7003/?callback=mobile    http://www.xinj0.top/?callback=mobile
+        if (/Android|webOS|iPhone|iPod|BlackBerry|MicroMessenger/i.test(navigator.userAgent)) {
+            window.location.href = "/?callback=mobile";
+        } else { //pc端 测试地址  http://app.pc.xinj5.top/      http://www.xinj1.top/
+            window.location.href = "http://app.pc.xinj5.top";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<ion-content>
+    <img class="back_img" src="assets/images/home/icon_back@{{dpr}}x.png" (click)="goBack()">
+    <div class="ld_wrap">
+        <video preload="auto" controls="controls" tappable poster="assets/images/live/live_img.png" [src]="liveUrl" data-setup='{}'></video>
+    </div>
+    <p class="ld_title">{{livingData.title}}</p>
+    <div class="ld_tip">
+        <img class="avatar" src="assets/images/live/my_icon_details@3x.png">
+        <p class="author">
+            {{livingData.nickname}}
+            <img src="assets/images/home/home_earnings_icon_blue@{{dpr}}x.png">
+        </p>
+        <p class="audience">
+            <img src="assets/images/live/live_icon_person@{{dpr}}x.png"> 100
+        </p>
+    </div>
+    <div class="ld_comment" #comment (touchstart)="touchS()" (touchend)="touchE()">
+        <p class="ld_tit">
+            欢迎来到直播间。平台提倡健康和谐的直播环境，对直播内容随时进行巡查。任何传播违法、违规等不良内容 时将被封号。
+        </p>
+        <div class="other_speak" *ngFor="let x of commentData" [ngClass]="{'my_speak':globalData.childAccountNo==x.accountNo}">
+            <div>
+                <p>{{x.nickname|nameReplace}}:</p>
+            </div>
+            <div>
+                <p>{{x.content}}</p>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="fix_wrap" id="set_input">
+        <div class="foot_wrap" #foot>
+            <input type="text" placeholder="说点什么吧" [(ngModel)]="input_cont">
+            <button (click)="send()">发送</button>
+        </div>
+    </div>
+
+</ion-content>

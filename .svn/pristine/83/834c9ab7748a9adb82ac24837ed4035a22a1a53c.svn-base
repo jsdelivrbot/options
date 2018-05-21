@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="nt"></div>
+    <div class="show_count div_bgcolor">
+        <div>
+            <p>已赚佣金</p>
+            <p class="th_light">{{data.fundsRebate}}</p>
+            <button class="but" ion-button outline (click)="gowithdraw()">提取</button>
+        </div>
+        <div>
+            <p>佣金比例</p>
+            <p class="th_light">{{data.rebateRate}}</p>
+            <p class="th_light">{{data.rebateDesc}}</p>
+        </div>
+        <div>
+            <p>我的用户</p>
+            <p class="th_light">{{data.totalUser}}</p>
+            <p class="th_light">交易{{data.tradUser}}人</p>
+        </div>
+    </div>
+    <div class="nt"></div>
+    <div class="qr_wrap div_bgcolor">
+        <strong class="th_gray">您的推广码</strong>
+        <div>
+            <p tappable (click)="copy()">{{data.childAccountNo}}</p>
+        </div>
+    </div>
+    <img src="assets/images/promote/promotion_img@{{dpr}}x.png" imageViewer (close)="closeview()" />
+    <img src="assets/images/my/promotion_img.png">
+    <div class="nt"></div>
+    <div class="level_table div_bgcolor">
+        <p class="th_gray">推广员级别</p>
+        <table border="0" cellspacing="1" cellpadding="0">
+            <tr>
+                <td>级别</td>
+                <td>下先交易用户数量</td>
+                <td>交易提成佣金比例</td>
+                <td>下线有效期</td>
+            </tr>
+            <tr *ngFor="let data of levelData">
+                <td>{{data.level}}</td>
+                <td>{{data.userCount}}</td>
+                <td>{{data.rate}}</td>
+                <td>{{data.validity}}</td>
+            </tr>
+        </table>
+    </div>
+</ion-content>

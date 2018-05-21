@@ -1,0 +1,150 @@
+import { Component } from '@angular/core';
+import { NavController, NavParams ,AlertController} from 'ionic-angular';
+import {TradeService} from '../../tradeService';
+import { GlobalData } from "../../../../providers/GlobalData";
+@Component({
+	selector: 'page-positions',
+	templateUrl: 'positions.html',
+})
+export class PositionsPage {
+	private dpr=sessionStorage.dpr;
+	private noData:boolean=false;
+	private data:any;
+	private showline:boolean=false;
+	private pageIndex:number=1;//页面初始index
+	private pageSize:number=8;//每页数据量
+	private total:number;//总盈亏
+	constructor(
+		private navCtrl: NavController, 
+		private navParams: NavParams,
+		private tradeService: TradeService,
+		private globaldata: GlobalData,
+		private alertCtrl: AlertController
+	) {
+		
+	}
+	ionViewDidLoad(){
+		if(!this.globaldata.authState){
+			this.noData=true;
+			return
+		}
+		this.tradeService.tradeRecord(this.pageIndex,this.pageSize,6)
+		.subscribe(res => {
+			if(res.success=="true"){
+				if(res.data.length==0){
+					this.noData=true;
+					return;
+				}else{
+					this.noData=false;
+				}
+				this.data=res.data;
+			}else{
+                this.alertCtrl.create({
+					title: res.errorMsg,
+					subTitle: '',
+					buttons: [{text: '确定'}]
+				  }).present();
+            }
+		})		
+	}
+	//行权
+	exercise(id){
+		this.alertCtrl.create({
+			title: '确定行权?',
+			buttons: [
+			  {
+				text: '取消',
+				role: 'cancel',
+				handler: () => {
+				}
+			  },
+			  {
+				text: '确定',
+				handler: () => {
+					this.tradeService.exercise(id)
+					.subscribe(res => {
+						console.log('行权结果',res)
+						if(res.success=="true"){
+							this.alertCtrl.create({
+								title: '行权成功',
+								subTitle: '',
+								buttons: [{text: '确定'}]
+							}).present();
+							this.tradeService.tradeRecord(1,this.pageIndex*this.pageSize,6)
+							.subscribe(res => {
+								if(res.success=="true"){
+									if(res.data.length==0){
+										this.noData=true;
+									}else{
+										this.noData=false;
+									}
+									this.data=res.data;
+								}else{
+									this.alertCtrl.create({
+										title: res.errorMsg,
+										subTitle: '',
+										buttons: [{text: '确定'}]
+									}).present();
+								}
+							})		
+						}else{
+							this.alertCtrl.create({
+								title: res.errorMsg,
+								subTitle: '',
+								buttons: [{text: '确定'}]
+							}).present();
+						}
+					})		
+				}
+			  }
+			]
+		  }).present();
+	}
+	 //下拉刷新
+	 doRefresh(refresher) {
+		this.globaldata.showLoading=false;
+		this.tradeService.tradeRecord(1,this.pageIndex*this.pageSize,6)
+		.subscribe(res => {
+			if(res.success=="true"){
+				refresher.complete();
+				if(res.data.length==0){
+					this.noData=true;
+				}else{
+					this.noData=false;
+				}
+				this.data=res.data;
+			}else{
+                this.alertCtrl.create({
+					title: res.errorMsg,
+					subTitle: '',
+					buttons: [{text: '确定'}]
+				  }).present();
+            }
+		})		
+      }
+      //上拉加载
+    doInfinite(infiniteScroll){
+		this.globaldata.showLoading=false;
+		this.pageIndex++;
+        this.tradeService.tradeRecord(this.pageIndex,this.pageSize,6)
+		.subscribe(res => {
+			if(res.success=="true"){
+								infiniteScroll.complete();
+                if(res.data.length==0){
+					infiniteScroll.enable(false);
+					this.showline=true;
+                    return;
+                }
+                //数组合并
+				this.data=[...this.data,...res.data];
+                  
+			}else{
+                this.alertCtrl.create({
+					title: res.errorMsg,
+					subTitle: '',
+					buttons: [{text: '确定'}]
+				  }).present();
+            }
+		})		
+    }
+}

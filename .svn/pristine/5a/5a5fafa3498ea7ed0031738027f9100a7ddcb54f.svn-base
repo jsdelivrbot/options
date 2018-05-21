@@ -1,0 +1,218 @@
+//委托下单接口文件
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.imubee.rpc.protobuf";
+option java_outer_classname = "TradeSer";
+option objc_class_prefix = "sst";
+package TradeSer;
+
+
+service SvrPostQhTradeSer{
+  rpc Svc_TradeOrderReq(OrderReq)returns (OrderResp){}														//报单请求
+  rpc Svc_TradeOrderActionReq(OrderActionReq)returns (OrderActionResp){}									//撤单操作
+  rpc Svc_TradeOrderQryReq(OrderQryReq)returns (OrderQryResp){}												//查询报单请求
+  rpc Svc_TradeQryReq(TradeQryReq)returns (TradeQryResp){}													//查询成交请求
+  rpc Svc_TradeCapitalAccountQryReq(TradeCapitalAccountQryReq)returns (TradeCapitalAccountQryResp){};		//查询资金账号信息
+  rpc Svc_TradeInvestorPositionQryReq(InvestorPositionQryReq)returns (InvestorPositionQryResp){};			//查询持仓信息
+}
+
+	
+//客户端报单请求的数据包
+message OrderReq{
+	repeated OrderInfo OrderInfo = 1; 		//委托信息
+}
+
+message OrderInfo{
+	int32		UnitID = 1;			        //单元ID(子账号)
+	string		InstrumentID = 2;			//合约代码(期货对应日期)
+	string		OrderPriceType = 3;			//报单价格条件(限价:1,市价:2,限价止损3,市价止损4)
+	string		OrderDirection = 4;			//买卖方向X卖出开仓、Y买入平仓、V买入开仓、W卖出平仓
+	string		CombOffsetFlag = 5;			//组合开平标志(开仓0，平仓1，平今2，平昨3，强平4)
+	double		LimitPrice = 6;				//价格
+	int32		VolumeTotalOriginal = 7;	//数量
+	double		StopLossMoney = 8;			//止损金额 ,比如1400，就代表该笔交易每手亏1400元人民币就平仓， 0代表没有设置
+    double		StopProfitMoney = 9;		//止盈金额，比如2000，就代表该笔交易每手赚2000元人民币就平仓， 0代表没有设置
+	int32		UnitTeamID = 10;			//单元组ID(资产单元id)
+	string		CombHedgeFlag = 11;			//投资类型，投机:1,套保:2,套利:3
+	string 		CommodityNo	= 12;			//商品代码,针对易盛接口(如:CL)
+	string		secType		= 13;			//安全类型(IB接口,有效值查看api)
+	string		ExchangeID =14;			    //市场
+    double      Deposit=15;             	//每手保证金额
+    int32       RiskPlanID=16;           	//风控方案Id
+    double      Fees=17;                 	//该笔交易手续费
+    string		TimeCondition = 18;			//有效期类型(DAY, GTD, GTC)
+	string		GTDDate = 19;				//有效期日期
+    string      Type=20;                 	//品种类型 1:内盘，0：外盘 
+	int32     	Way=21;                   	//报单接口类型  1：ctp, 2: 易盛，3：盈透, 0:模拟 
+	int32       PositionNO=22;              //持仓编号，用于平仓时，如果该字段有值，则平该持仓编号对应的持仓，如果该值为""，则按照时间的先后顺序进行平仓。
+	int32       CouponID=23;                //优惠券Id。
+	int32		FundPoolID = 24;			//资金池ID
+	int32		OrderId	   = 25;			//委托ID
+	int32		channel	= 26;				//通道
+	int32       APIType=27;                 //该品种所属API通道 1：ctp, 2: 易盛，3：盈透
+}
+
+
+
+// 回复的数据包
+message OrderResp{
+  string errMsg = 1;
+  sint32 errCode = 2;
+}
+
+//撤单操作请求的数据包
+message OrderActionReq{
+	int32 channel = 1;
+	repeated OrderActionInfo ActionInfo = 2; 
+}
+
+message OrderActionInfo
+{
+	string		BrokerID = 1;				//经纪公司代码
+	string		InvestorID = 2;				//投资者代码
+	int32		OrderActionRef = 3;			//报单操作引用
+	string		OrderRef = 4;				//报单引用
+	int32		FrontID = 5;				//前置编号
+	string		OrderSysID = 6;				//报单编号
+	string		ActionFlag = 7;				//撤单标志
+	double		LimitPrice = 8;				//价格
+	int32		VolumeChange = 9;			//数量变化
+	string		UserID 	= 10;				//用户代码
+	string		InstrumentID = 11;			//合约代码
+	int32		SessionID = 12;				//会话编号
+	string		ExchangeID = 13;			//市场
+	string 		OrderConfirmNO = 14;		//委托确认号
+}
+
+// 回复的数据包
+message OrderActionResp{
+  string errMsg = 1;
+  sint32 errCode = 2;
+} 
+
+//查询报单请求
+message OrderQryReq{
+	int32 channel = 1;						//交易通道(1.ctp,2.易盛 3.IB)
+	repeated OrderQryInfo orderqryinfo = 2; 
+}
+
+message OrderQryInfo
+{
+	string		BrokerID = 1;				//经纪公司代码
+	string		InvestorID = 2;				//投资者代码
+	string		InstrumentID = 3;			//合约代码
+	string		ExchangeID = 4;				//市场
+	string		OrderSysID = 5;				//报单编号
+	string 		InsertTimeStart = 6;		//开始时间
+	string 		InsertTimeEnd = 7;			//结束时间
+}
+
+//回复的数据包
+message OrderQryResp{
+  string errMsg = 1;
+  sint32 errCode = 2;
+} 
+
+//查询成交请求
+message TradeQryReq{
+	int32 channel = 1;						//交易通道(1.ctp,2.易盛 3.IB)
+	repeated TradeQryInfo tradeqryinfo = 2; 
+}
+
+message TradeQryInfo
+{
+	string		BrokerID = 1;				//经纪公司代码
+	string		InvestorID = 2;				//投资者代码
+	string		InstrumentID = 3;			//合约代码
+	string		ExchangeID = 4;				//市场
+	string		TradeID = 5;				//成交编号
+	string 		TradeTimeStart = 6;			//开始时间
+	string 		TradeTimeEnd = 7;			//结束时间
+}
+
+//回复的数据包
+message TradeQryResp{
+  string errMsg = 1;
+  sint32 errCode = 2;
+}
+
+
+//查询资金账户请求
+message TradeCapitalAccountQryReq{
+	int32 channel = 1;									//交易通道(1.ctp,2.易盛 3.IB)
+	repeated TradeCapitalAccountQryInfo tradeaccountinfo = 2; 
+}
+
+//查询资金账户信息
+message TradeCapitalAccountQryInfo
+{
+	string	BrokerID = 1;				//经纪公司代码
+	string	InvestorID = 2;				//投资者代码
+	string	CurrencyID = 3;				//币种
+}
+
+//回复的数据包
+message TradeCapitalAccountQryResp{
+  string errMsg = 1;
+  sint32 errCode = 2;
+}
+
+//查询账户持仓
+message InvestorPositionQryReq
+{
+	int32 channel = 1;						//交易通道(1.ctp,2.易盛 3.IB)
+	repeated InvestorPositionQryInfo positioninfo = 2;
+}
+ //查询账户持仓
+ message InvestorPositionQryInfo
+ {
+ 	string	BrokerID = 1;				//经纪公司代码
+	string	InvestorID = 2;				//投资者代码
+	string	InstrumentID = 3;			//合约代码
+ }
+//回复的数据包
+message InvestorPositionQryResp{
+  string errMsg = 1;
+  sint32 errCode = 2;
+}
+message SocketRequest{
+    int32 Action=1;
+    string Token=2;
+	int64 TimeStamp=3;
+    bytes Data=4;
+}
+message SocketRespone{
+    int32 Type=1;// 0 即时消息 1 系统消息  2 其他资管操作消息  3 标记删除消息 4 成交信息
+	int64 TimeStamp=2;
+    bytes Data=3;
+} 
+message Reply{
+  int32 Code=1;//0 成功 其他:失败
+  string Message=2;//code=0 时返回 本地成交编号 其他情况返回错误说明
+}
+
+message OMSMessage{
+    int32  orederno = 1;      // 委托序号
+    string orderstatus= 2;    //4：已报  5：废单  6：部成  7：已成  8：部撤  9：已撤(被撤的委托)  a：待撤(被撤的委托)
+    int32  unitid = 3;        // 子账户
+    int32  dealno = 4;       // 成交编号
+    string remarks = 5;       // 备注
+}
+
+// OrderCancel
+message OrderCancelReq {
+  int32 iOrderNo = 1;    // 委托序号
+  //int32 iOperator = 2;
+  //string sMac = 3;
+  //string sIpAddress= 4;
+}
+
+// OrderAbnormalCancel
+message OrderAbnormalCancelReq {
+    int32 iOrderNo = 1;  // 委托序号
+    //int32 iOperator = 2;
+    //string sMac = 3;
+    //string sIpAddress= 4;
+}
+

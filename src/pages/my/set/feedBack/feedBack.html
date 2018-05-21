@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>意见反馈</ion-title>
+        <button class="sub" ion-button bar-button item-end (click)="sub()">提交</button>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="cont" *ngIf="textarea">
+        <textarea autofocus placeholder="请写下您的意见或建议" maxlength=140 [(ngModel)]="textcont1"></textarea>
+    </div>
+    <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;">
+        <ion-label color="dark">用户名&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+        <ion-input placeholder="请输入您的用户名" type="text" maxlength=11 [(ngModel)]="textcont2"></ion-input>
+    </ion-item>
+    <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;">
+        <ion-label color="dark">联系方式</ion-label>
+        <ion-input placeholder="请输入手机号或邮箱" type="text" maxlength=30 [(ngModel)]="textcont3"></ion-input>
+    </ion-item>
+</ion-content>

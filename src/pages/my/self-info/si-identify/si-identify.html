@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>实名认证</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <img src="assets/images/my/my_attestation_img.png" class="sd_img">
+    <form [formGroup]="passwordForm" (ngSubmit)="nameVerify(passwordForm.value)">
+        <ion-item style="font-size:1.25rem;height:4.5rem;">
+            <ion-label color="dark">真实姓名</ion-label>
+            <ion-input formControlName="name" placeholder="请输入真实姓名" type="text"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.name.valid && passwordForm.controls.name.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!passwordForm.controls.name.valid && passwordForm.controls.name.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;">
+            <ion-label color="dark">身份证号</ion-label>
+            <ion-input formControlName="verify" placeholder="请输入身份证号" type="text"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.verify.valid && passwordForm.controls.verify.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!passwordForm.controls.verify.valid && passwordForm.controls.verify.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <br>
+        <br>
+        <button ion-button block type="submit" style="margin:0 auto;width:92%;height:3.33rem;" [disabled]="!passwordForm.valid||submitted">立即认证</button>
+        <br>
+    </form>
+</ion-content>

@@ -1,0 +1,46 @@
+import { Component } from '@angular/core';
+import { NavController, NavParams,Events,AlertController } from 'ionic-angular';
+import { GlobalData } from "../../../../providers/GlobalData";
+import { myService } from "../../myService";
+@Component({
+	selector: 'page-bank',
+	templateUrl: 'bank.html',
+})
+export class BankPage {
+	private money:number;
+	private name:string;
+	constructor(
+		private navCtrl: NavController,
+		 private navParams: NavParams,
+		 private globalData:GlobalData,
+		 private events:Events,
+		 private myService:myService,
+		 private alertCtrl:AlertController,
+		) {
+		this.money=navParams.data;
+		this.name=globalData.realName;
+	}
+
+	ionViewDidLoad() {
+	}
+	sub(){
+		this.myService.offLinePay(String(this.money),'银行卡',this.name)
+		.subscribe(res => {
+			if(res.success=="true"){
+				this.events.publish('goOrDetail',{
+					id:res.data,
+					showTab:'银行卡'
+				})
+			}else{
+				this.alertCtrl.create({
+					title: res.errorMsg,
+					subTitle: '',
+					buttons: [{text: '确定'}]
+					}).present();
+			}
+		})
+	}
+	orderRecoder(){
+		this.events.publish('goOrRecord')
+	}
+}

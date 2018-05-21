@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>我的银行卡</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card class="bank_card" (click)="delCard(hero.id)" *ngFor="let hero of data" [@flyIn]="'active'">
+        <img src="{{hero.bankIcon}}">
+        <p class="p1">{{hero.bank}}</p>
+        <!-- <p class="p2">储蓄卡</p> -->
+        <p class="p3">{{hero.bankCardNumber}}</p>
+    </ion-card>
+    <ion-card class="sb_card" (click)="addcard()" *ngIf="data.length<3">
+        <em><ion-icon name="ios-add-circle-outline"></ion-icon>添加银行卡</em>
+    </ion-card>
+    <br>
+    <p class="sb_p">注：最多只能绑定3张银行卡</p>
+</ion-content>

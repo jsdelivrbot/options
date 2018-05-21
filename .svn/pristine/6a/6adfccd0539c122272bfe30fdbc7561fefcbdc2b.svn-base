@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>充值成功</title>
+</head>
+
+<body>
+  <script>
+  if (/Android|webOS|iPhone|iPod|BlackBerry|MicroMessenger/i.test(navigator.userAgent)) {
+    window.location.href = "http://47.97.60.28:7003/?callback=mobile";
+  } else { //pc端
+    alert('充值成功')
+  }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+thumb-nail {
+    .wrap {
+        width: 100%;
+        height: 7.5rem;
+        background: #FFFFFF;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.50);
+        position: relative;
+        img {
+            width: 26.7%;
+            height: 5.83rem;
+            border: none;
+            position: absolute;
+            left: 0.42rem;
+            top: 0.835rem;
+        }
+        em {
+            font-style: normal;
+            font-family: PingFangSC-Regular;
+            font-size: 1rem;
+            color: #999999;
+            letter-spacing: 0;
+            position: absolute;
+            bottom: 0.42rem;
+            right: 1.25rem;
+        }
+        &>div {
+            position: absolute;
+            width: 65.3%;
+            height: 3.5rem;
+            overflow: hidden;
+            left: 30.7%;
+            top: 1.25rem;
+            p {
+                font-family: PingFangSC-Regular;
+                font-size: 1.25rem;
+                color: #000000;
+                letter-spacing: 2px;
+                line-height: 1.75rem;
+            }
+        }
+    }
+}

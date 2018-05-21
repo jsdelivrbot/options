@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="nt"></div>
+    <div class="list_wrap">
+        <div class="list_title ">
+            <span>用户</span>
+            <span>交易手数</span>
+            <span>注册时间</span>
+        </div>
+        <div class="list_item" *ngFor="let x of data">
+            <span>{{data.childAccountName}}</span>
+            <span>{{data.tradCount}}</span>
+            <span>{{data.addTime}}</span>
+        </div>
+    </div>
+    <div *ngIf="!data">
+        <img style="width:20%;margin-left:40%;margin-top:35%;" src="assets/images/my/details_nodate@{{dpr}}x.png">
+        <p style="text-align:center;font-family: PingFangSC-Regular;margin-top:1.25rem;font-size: 1.25rem;color: #CCCCCC;letter-spacing: 2px;">暂无数据</p>
+    </div>
+</ion-content>

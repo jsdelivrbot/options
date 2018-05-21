@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover">
+  <title>充值</title>
+</head>
+<style>
+input {
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+</style>
+
+<body style='text-align:center;'>
+  <form action="" method="POST" id='recharge1'>
+    <input type="text" id='recharge2' name="encryp">
+    <input type="text" id='recharge3' name="url">
+    <input type="text" id='recharge4' name="bankCode">
+    <input type="text" id='recharge5' name="bankcardNo">
+    <input type="submit" id="submit" value="确定充值">
+  </form>
+  <script>
+  //获取url中的参数
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split("=");
+      if (pair[0] == variable) {
+        return pair[1];
+      }
+    }
+    return (false);
+  }
+  document.getElementById('recharge1').action = getQueryVariable('hostPath')
+  document.getElementById('recharge2').value = getQueryVariable('encryp')
+  document.getElementById('recharge3').value = getQueryVariable('url')
+  document.getElementById('recharge4').value = getQueryVariable('bankCode')
+  document.getElementById('recharge5').value = getQueryVariable('bankcardNo')
+  document.getElementById('submit').click();
+
+  </script>
+</body>
+
+</html>

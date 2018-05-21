@@ -1,0 +1,73 @@
+import { Component } from '@angular/core';
+import { NavController, NavParams,AlertController,ToastController } from 'ionic-angular';
+import { GlobalData } from "../../../../providers/GlobalData";
+import { myService } from "../../myService";
+@Component({
+	selector: 'page-or-detail',
+	templateUrl: 'or-detail.html',
+})
+export class OrDetailPage {
+	showTab:string;
+	isSigned:boolean=false;
+	data1:any=[];//支付宝
+	data2:any=[];//银行卡
+	constructor(
+		private navCtrl: NavController,
+		private navParams: NavParams,
+		private myService: myService,
+		private alertCtrl: AlertController,
+		private toastCtrl: ToastController,
+		private globalData:GlobalData) {
+			this.showTab=navParams.get('showTab');
+	}
+
+	ionViewDidLoad() {
+		if(this.navParams.get('showTab')=='支付宝'){
+			this.myService.getZhiFuBao()
+			.subscribe(res => {
+				if(res.success=="true"){
+					this.data1=res.data;
+				}else{
+					this.alertCtrl.create({
+						title: res.errorMsg,
+						subTitle: '',
+						buttons: [{text: '确定'}]
+						}).present();
+				}
+			})
+		}else{
+			this.myService.getBank()
+			.subscribe(res => {
+				if(res.success=="true"){
+					this.data2=res.data;
+				}else{
+					this.alertCtrl.create({
+						title: res.errorMsg,
+						subTitle: '',
+						buttons: [{text: '确定'}]
+						}).present();
+				}
+			})
+		}
+	}
+	sub(){
+		this.myService.signStatus(this.navParams.get('id'))
+		.subscribe(res => {
+			if(res.success=="true"){
+				this.toastCtrl.create({
+					message: '标记成功',
+					duration: 1500,
+					position: 'top'
+				}).present();
+				this.navCtrl.popToRoot();
+				this.isSigned=true;
+			}else{
+				this.alertCtrl.create({
+					title: res.errorMsg,
+					subTitle: '',
+					buttons: [{text: '确定'}]
+					}).present();
+			}
+		})
+	}
+}

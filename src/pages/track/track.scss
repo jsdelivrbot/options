@@ -1,0 +1,109 @@
+page-track {
+    .tittle_wrap {
+        width: 100%;
+        height: 2.67rem;
+        margin-bottom: 1.25rem;
+        margin-top: 0.83rem;
+        position: relative;
+        p:first-child {
+            font-family: PingFangSC-Medium;
+            font-size: 2.67rem;
+            color: #333333;
+            letter-spacing: 0;
+            font-weight: bold;
+            position: absolute;
+            left: 1.25rem;
+            bottom: 0;
+        }
+        p:last-child {
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #3AA0F6;
+            letter-spacing: 0;
+            position: absolute;
+            right: 1.25rem;
+            bottom: 0;
+        }
+    }
+    .item_wrap {
+        width: 92%;
+        height: 9.17rem;
+        position: relative;
+        margin: 0 auto;
+        background: #FFFFFF;
+        box-shadow: 0 0.25rem 1rem 0 rgba(211, 211, 211, 0.50);
+        border-radius: 0.5rem;
+        .avatar {
+            position: absolute;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 4px;
+            left: 0.83rem;
+            top: 0.83rem;
+        }
+        .author_wrap {
+            height: 1.67rem;
+            position: absolute;
+            left: 3.75rem;
+            top: 0.63rem;
+            display: flex;
+            .author {
+                font-family: PingFangSC-Regular;
+                font-size: 1.2rem;
+                color: #333333;
+                letter-spacing: 0;
+            }
+            .vip {
+                width: 1rem;
+                height: 1rem;
+                margin: 0.2rem 0.83rem 0 0.42rem;
+            }
+            .level {
+                width: 4.17rem;
+                height: 1.33rem;
+            }
+        }
+        .track_num {
+            position: absolute;
+            right: 0.83rem;
+            top: 0.83rem;
+            font-family: PingFangSC-Regular;
+            font-size: 1rem;
+            color: #FF4C52;
+            letter-spacing: 0;
+        }
+        .description {
+            position: absolute;
+            width: 75%;
+            top: 2.71rem;
+            left: 3.75rem;
+            p {
+                font-family: PingFangSC-Regular;
+                font-size: 1rem;
+                color: #999999;
+                letter-spacing: 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        table {
+            width: 70%;
+            position: absolute;
+            bottom: 0.83rem;
+            text-align: left;
+            left: 3.75rem;
+            td {
+                font-family: PingFangSC-Regular;
+                font-size: 1rem;
+                color: #999999;
+                letter-spacing: 0;
+            }
+            tr:nth-child(1) {
+                td {
+                    color: #FF4C52;
+                }
+            }
+        }
+    }
+}

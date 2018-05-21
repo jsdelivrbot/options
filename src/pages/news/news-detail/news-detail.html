@@ -1,0 +1,16 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>详情</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <h4 class="title">
+        {{data.title}}
+    </h4>
+    <p class="time ">{{data.addTime}}</p>
+    <!-- <div class="bot_line"></div> -->
+    <div [innerHtml]="data.html" class="th_light"></div>
+</ion-content>

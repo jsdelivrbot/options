@@ -1,0 +1,15 @@
+page-money-detail {
+    .tabbar {
+        opacity: 1!important;
+    }
+    .tabs-ios .tab-button[aria-selected=true] {
+        // border-bottom: 2px solid #3AA0F6!important;
+        span {
+            border-bottom: 1.5px solid #3AA0F6!important;
+            height: 2rem;
+        }
+    }
+    .tabs-ios[tabsPlacement=top] .tabbar {
+        border-bottom: none;
+    }
+}

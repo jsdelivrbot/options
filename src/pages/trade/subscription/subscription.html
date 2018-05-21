@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>申购</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="div_wrap">
+        <div>
+            <img src="assets/images/trade/buy_icon_1@{{dpr}}x.png">
+            <p class='p1'>标的股票</p>
+            <input type="text" [(ngModel)]="M_stock" #ctrl1="ngModel" required placeholder="请输入股票代码/简拼">
+            <p class="p2" *ngIf='price'>买入价&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{price}}</strong></p>
+            <div tappable class="over_wrap" (click)="openModal();$event.stopPropagation();$event.preventDefault();"></div>
+        </div>
+        <div>
+            <img src="assets/images/trade/buy_icon_2@{{dpr}}x.png">
+            <p class='p1'>行权周期</p>
+            <div class="but_wrap">
+                <div tappable (click)='clickOne(x.refValue)' [ngClass]="{'active': choose1==x.refValue}" *ngFor="let x of constr1Data">
+                    <p>{{x.refText}}</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="assets/images/trade/buy_icon_3@{{dpr}}x.png">
+            <p class='p1'>名义本金</p>
+            <input type="tel" [disabled]="!canType" [(ngModel)]="M_num" placeholder="{{selfSet}}">
+            <p class="p2">万</p>
+            <div class="but_wrap">
+                <div tappable (click)='clickTwo(x.refValue)' [ngClass]="{'active': M_num==x.refValue}" *ngFor="let x of constr2Data">
+                    <p>{{x.refText}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <button ion-button block style="margin:0 auto;width:92%;height:3.33rem;" (click)="inquiry()" [disabled]="!ctrl1.valid">询价</button>
+</ion-content>

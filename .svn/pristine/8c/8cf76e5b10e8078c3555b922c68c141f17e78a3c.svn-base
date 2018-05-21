@@ -1,0 +1,284 @@
+page-product {
+    .font_red {
+        color: #DF3F43!important;
+    }
+    .font_green {
+        color: #19B03F!important;
+    }
+    .seg {
+        width: 92%;
+        margin: 0.83rem 4% 0.83rem 4%;
+    }
+    .pro_head {
+        width: 100%;
+        height: 2.5rem;
+        position: relative;
+        p:nth-child(1) {
+            font-family: PingFangSC-Medium;
+            font-size: 1.67rem;
+            color: #22CE8F;
+            letter-spacing: 0;
+            position: absolute;
+            left: 1.25rem;
+            em {
+                font-style: normal;
+                font-family: PingFangSC-Regular;
+                font-size: 1.2rem;
+                color: #999999;
+                letter-spacing: 0;
+            }
+        }
+        p:nth-child(2) {
+            font-family: PingFangSC-Medium;
+            font-size: 1.2rem;
+            color: #22CE8F;
+            letter-spacing: 0;
+            position: absolute;
+            right: 1.25rem;
+            bottom: 0.83rem;
+        }
+    }
+    .table1 {
+        width: 100%;
+        td {
+            height: 2.4rem;
+            width: 33%;
+            padding-left: 1.25rem;
+            text-align: left;
+            em {
+                font-style: normal;
+            }
+        }
+    }
+    .rotated_wrap {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        .rotated_tit {
+            height: 15%;
+            display: flex;
+            &>div:nth-child(1) {
+                flex: 2;
+                table {
+                    width: 100%;
+                    height: 100%;
+                    tr {
+                        height: 50%;
+                    }
+                    tr:nth-child(1) {
+                        td:nth-child(1) {
+                            font-family: PingFangSC-Regular;
+                            font-size: 1.75rem;
+                            color: #000000;
+                            letter-spacing: 2px;
+                        }
+                    }
+                    td {
+                        padding-left: 0.83rem;
+                        text-align: left;
+                        em {
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+            &>div:nth-child(2) {
+                flex: 3;
+                table {
+                    width: 100%;
+                    height: 100%;
+                    tr {
+                        height: 50%;
+                    }
+                    td {
+                        padding-left: 1.25rem;
+                        text-align: left;
+                        em {
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+        }
+        .seg {
+            height: 10%;
+            margin: 0 4%;
+            .segment-ios .segment-button {
+                height: 100%!important;
+            }
+        }
+        .rotated_chart {
+            margin-top: 2%;
+            height: 73%;
+        }
+    }
+    .candle {
+        width: 96%;
+        margin-left: 2%;
+        height: 23.75rem;
+        position: relative;
+        overflow: hidden;
+        .rotate_icon {
+            position: absolute;
+            width: 2.08rem;
+            height: 2.08rem;
+            right: 0.83rem;
+            bottom: 0.83rem;
+            z-index: 3;
+        }
+    }
+    #myChart {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #myChart_land {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .zIndex {
+        z-index: 0;
+    }
+    .changeZindex {
+        z-index: 2!important;
+    }
+    .item1 {
+        width: 100%;
+        height: 3.75rem;
+        position: relative;
+        border-top: 1px solid rgba(204, 204, 204, 0.5);
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        p {
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #000000;
+            letter-spacing: 2px;
+            position: absolute;
+            left: 1.25rem;
+            top: 1.25rem;
+        }
+        .button-ios {
+            width: 5.83rem;
+            height: 2.08rem;
+            position: absolute;
+            right: 1.25rem;
+            top: 0.835rem;
+            margin: 0;
+        }
+    }
+    .item2 {
+        width: 100%;
+        height: 3.75rem;
+        display: flex;
+        padding: 0 1.25rem;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        &>div {
+            flex: 1;
+            text-align: center;
+            p {
+                font-family: PingFangSC-Regular;
+                font-size: 1.25rem;
+                color: #999999;
+                letter-spacing: 2px;
+                line-height: 3.75rem;
+            }
+        }
+    }
+    ._footer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        height: 4rem;
+        &>div {
+            flex: 1;
+            text-align: center;
+            p {
+                font-family: PingFangSC-Regular;
+                font-size: 1.5rem;
+                color: #999999;
+                letter-spacing: 2px;
+                line-height: 4rem;
+            }
+        }
+        .button-ios {
+            width: 100%!important;
+            height: 100%!important;
+            margin: 0!important;
+            border-radius: 0!important;
+        }
+        &>div:nth-child(1) {
+            border-top: 1px solid rgba(204, 204, 204, 0.5);
+        }
+    }
+    .td_tittle {
+        position: relative;
+        height: 2rem;
+        width: 100%;
+        margin-top: 1.25rem;
+        img {
+            position: absolute;
+            left: 1.25rem;
+            width: 1.25rem;
+            height: 1.41rem;
+        }
+        p {
+            position: absolute;
+            left: 3.25rem;
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #999999;
+            letter-spacing: 0;
+        }
+    }
+    .buyDetail {
+        width: 92%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 10rem;
+        td {
+            width: 25%;
+            height: 1.7rem;
+        }
+    }
+    .buy_but {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        position: fixed;
+        bottom: 5rem;
+        z-index: 11;
+        padding-top: 0.5rem;
+        button {
+            width: 40%;
+            height: 3.33rem;
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            border-radius: 0.3rem;
+        }
+        button:first-child {
+            margin-left: 8%;
+            background-image: linear-gradient(45deg, #36E6A6 0%, #22CE8F 100%)!important;
+        }
+        button:first-child.activated {
+            background-image: linear-gradient(45deg, #25d896 0%, #11ad74 100%)!important;
+        }
+        button:last-child {
+            margin-left: 4%;
+            background-image: linear-gradient(45deg, #FF5C7D 0%, #FF4C52 100%)!important;
+        }
+        button:last-child.activated {
+            background-image: linear-gradient(45deg, #f33057 0%, #da2228 100%)!important;
+        }
+    }
+}

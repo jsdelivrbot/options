@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>充值</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class='top_choose'>
+        <input type="tel" [(ngModel)]="moneyamount" placeholder="{{selfSet}}">
+        <div class="but_wrap">
+            <div tappable (click)='choose(x)' [ngClass]="{'active': moneyamount==x}" *ngFor="let x of constr2Data">
+                <p>{{x}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="money_pay">
+        <!-- <div class="pay_type div_bgcolor div_bottom">
+            <p class="th_light">充值方式:</p>
+        </div> -->
+        <ion-item>
+            <ion-label>充值方式</ion-label>
+        </ion-item>
+        <ion-list radio-group [(ngModel)]="pay_type" (ionChange)="chooseType()">
+            <!-- <ion-item>
+                <img class="rc_icon" item-start src="assets/images/my/recharge_icon_alipay@{{dpr}}x.png">
+                <ion-label>支付宝</ion-label>
+                <ion-radio value="zhifubao"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <img class="rc_icon" item-start src="assets/images/my/recharge_icon_wechat@{{dpr}}x.png">
+                <ion-label>微信</ion-label>
+                <ion-radio value="weixin"></ion-radio>
+            </ion-item> -->
+            <ion-item>
+                <img class="rc_icon" item-start src="assets/images/my/recharge_icon_fast@{{dpr}}x.png">
+                <ion-label>快捷</ion-label>
+                <ion-radio value="kuaijie"></ion-radio>
+            </ion-item>
+            <!-- <ion-item>
+                <img class="rc_icon" item-start src="assets/images/my/yinlian.png">
+                <ion-label>网银</ion-label>
+                <ion-radio value="wangyin"></ion-radio>
+            </ion-item> -->
+        </ion-list>
+        <br>
+        <!-- <ion-list>
+            <ion-item>
+                <ion-label>选择银行</ion-label>
+                <ion-select [(ngModel)]="choose_bank" interface="popover" (ionChange)="chooseBank()">
+                    <ion-option *ngFor='let x of bankData' value="{{x.bankCode}}">{{x.bankName}}</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list> -->
+        <ion-item>
+            充值金额：<em class="money_num">{{moneyamount}}</em>
+        </ion-item>
+    </div>
+    <!-- <div class="money_type">
+        <ion-item>
+            充值币种：CNY
+        </ion-item>
+    </div> -->
+    <br><br>
+    <button ion-button block (click)="sub()" style="margin:0 4%;width:92%;">提交订单</button>
+</ion-content>

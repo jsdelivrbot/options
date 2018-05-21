@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>账单明细</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-tabs #subTabs selectedIndex="0" tabsPlacement="top" id="tabs_special">
+    <ion-tab [root]="tab1Root" tabTitle="充值"></ion-tab>
+    <!-- <ion-tab [root]="tab2Root" tabTitle="提现"></ion-tab> -->
+    <ion-tab [root]="tab3Root" tabTitle="入金申请"></ion-tab>
+    <ion-tab [root]="tab4Root" tabTitle="出金申请"></ion-tab>
+</ion-tabs>

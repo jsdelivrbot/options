@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons start *ngIf='!hideClose'>
+            <button ion-button icon-only (click)="closelogin()">
+                <ion-icon name="md-close"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <p class="_tittle">登录</p>
+    <form [formGroup]="passwordForm" (ngSubmit)="login(passwordForm.value);$event.preventDefault();$event.stopPropagation();">
+        <div class="form_wrap">
+            <ion-item style="font-size:1.25rem;height:4.5rem;padding-left: 0;">
+                <ion-label color="dark">手机号</ion-label>
+                <ion-input formControlName="account" placeholder="请输入手机号" type="tel"></ion-input>
+                <ion-icon *ngIf="passwordForm.controls.account.valid && passwordForm.controls.account.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+                <ion-icon *ngIf="!passwordForm.controls.account.valid && passwordForm.controls.account.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+            </ion-item>
+            <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;">
+                <ion-label color="dark">密&nbsp;&nbsp;&nbsp;&nbsp;码</ion-label>
+                <ion-input formControlName="password" placeholder="请输入密码" type="password"></ion-input>
+                <ion-icon *ngIf="passwordForm.controls.password.valid && passwordForm.controls.password.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+                <ion-icon *ngIf="!passwordForm.controls.password.valid && passwordForm.controls.password.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+            </ion-item>
+            <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;" *ngIf="showPicVerify">
+                <ion-label color="dark">验证码</ion-label>
+                <ion-input formControlName="verifyCode" placeholder="请输入验证码" type="text"></ion-input>
+            </ion-item>
+            <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;" (click)="refreshcode(passwordForm.value)" *ngIf="showPicVerify">
+                <ion-label color="dark">点击刷新</ion-label>
+                <img item-end [src]="imgUrl" tappable>
+            </ion-item>
+        </div>
+
+        <br>
+        <br>
+        <button ion-button block type="submit" style="width:100%;height:3.33rem;" *ngIf="!showPicVerify" [disabled]="!passwordForm.valid||submitted">登录</button>
+        <button ion-button block type="submit" style="width:100%;height:3.33rem;" *ngIf="showPicVerify" [disabled]="!passwordForm.valid||submitted||!passwordForm.controls.verifyCode.value">登录</button>
+        <br>
+    </form>
+    <div class="res_div">
+        <p tappable [navPush]="registerpage">立即注册</p>
+        <p tappable [navPush]="fverifypage">忘记密码？</p>
+    </div>
+
+</ion-content>

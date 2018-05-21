@@ -1,0 +1,179 @@
+    /***********白天主题色************/
+    /**********header背景色**********/
+    
+    .toolbar-background-ios {
+        background: #FFFFFF!important;
+    }
+    /**********tabbar颜色**********/
+    
+    .tabs-ios .tabbar {
+        background: #FFFFFF!important;
+    }
+    
+    #tabs_special .tabbar {
+        background: white!important;
+    }
+    /**********head-title**********/
+    
+    .toolbar-title-ios {
+        font-family: PingFangSC-Medium!important;
+        color: #333333!important;
+        letter-spacing: 0!important;
+        font-weight: 600!important;
+    }
+    /***********返回键颜色************/
+    
+    .bar-button-default-ios {
+        color: #CCCCCC!important;
+    }
+    /*************item颜色*************/
+    
+    .item-ios {
+        background: white!important;
+        color: black!important;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.6)!important;
+    }
+    /**********border-bottom**********/
+    
+    .div_bottom {
+        border-bottom: 1px solid rgba(204, 204, 204, 0.6)!important;
+    }
+    
+    .segment-ios .segment-button.segment-activated {
+        background: white!important;
+        color: #FF5757!important;
+    }
+    
+    .segment-ios .segment-button {
+        border: none!important;
+        background: white!important;
+        color: #999999!important;
+        border-radius: unset!important;
+    }
+    
+    #seg_special .segment-button.segment-activated {
+        background: white!important;
+    }
+    
+    #seg_special .segment-button {
+        border: 1px solid white!important;
+        background: #3AA0F6!important;
+    }
+    
+    .label-ios-dark,
+    .item-input .label-ios-dark {
+        color: black!important;
+    }
+    
+    .item-ios.item-block .item-inner {
+        border-bottom: none!important;
+    }
+    /**********div背景颜色**********/
+    
+    .div_bgcolor {
+        background: white!important;
+    }
+    
+    .div_redbg {
+        background: #3AA0F6!important;
+    }
+    
+    .list-ios>.item-block:first-child {
+        border-top: none!important;
+    }
+    /**********content背景色*******/
+    
+    .scroll-content {
+        background: #FFFFFF;
+    }
+    /*******滚动content背景色********/
+    
+    .content-ios {
+        background: #FFFFFF!important;
+    }
+    /**********文字颜色模式1**********/
+    
+    .th_light {
+        color: black !important;
+    }
+    /**********文字颜色模式2**********/
+    
+    .th_second {
+        color: white!important;
+    }
+    /**********文字颜色模式3**********/
+    
+    .th_red {
+        color: #DF3F43!important;
+    }
+    /**********文字颜色模式4**********/
+    
+    .th_blue {
+        color: blue!important;
+    }
+    /**********文字颜色模式5**********/
+    
+    .th_gray {
+        color: #999999!important;
+    }
+    
+    .button-ios {
+        background-image: linear-gradient(45deg, #6FD9FF 0%, #6DB3FF 100%)!important;
+    }
+    
+    .button-ios.activated {
+        background-image: linear-gradient(45deg, #58D3FF 0%, #5397E2 100%)!important;
+    }
+    
+    .button-outline-ios,
+    .picker-button {
+        background-image: unset!important;
+    }
+    
+    .nt {
+        background: #F4F4F4;
+        height: 0.41rem;
+        width: 100%;
+    }
+    
+    .div_graybg {
+        background: #F4F4F4;
+    }
+    
+    .loading-content {
+        text-align: center;
+    }
+    
+    .loading-content .self_load {
+        width: 15rem;
+    }
+    
+    .loading-content .self_load img {
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .loading-content .self_load .p1 {
+        font-family: PingFangSC-Medium;
+        font-size: 1.25rem;
+        color: #333333;
+        letter-spacing: 0;
+        font-weight: bold;
+        line-height: 2.5rem;
+    }
+    
+    .loading-content .self_load .p2 {
+        font-family: PingFangSC-Regular;
+        font-size: 1rem;
+        color: #333333;
+        letter-spacing: 0;
+        opacity: 0.5;
+        line-height: 2rem;
+    }
+    
+    ion-label {
+        font-family: PingFangSC-Regular!important;
+        font-size: 1.25rem!important;
+        color: #333333!important;
+        letter-spacing: 0!important;
+    }

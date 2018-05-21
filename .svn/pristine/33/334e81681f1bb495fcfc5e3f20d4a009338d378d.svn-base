@@ -1,0 +1,38 @@
+page-login {
+    ._tittle {
+        font-family: PingFangSC-Medium;
+        font-size: 2.67rem;
+        color: #000000;
+        letter-spacing: 0;
+        font-weight: bold;
+    }
+    .form_wrap {
+        width: 100%;
+        border-radius: 0.8rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+        overflow: hidden;
+    }
+    .res_div {
+        width: 92%;
+        margin: 0 auto;
+        height: 2rem;
+        position: relative;
+        p:nth-child(1) {
+            position: absolute;
+            left: 0;
+            font-family: PingFangSC-Medium;
+            font-size: 1.33rem;
+            color: #3AA0F6;
+            letter-spacing: 0;
+        }
+        p:nth-child(2) {
+            position: absolute;
+            right: 0;
+            font-family: PingFangSC-Medium;
+            font-size: 1.33rem;
+            color: #999999;
+            letter-spacing: 0;
+        }
+    }
+}

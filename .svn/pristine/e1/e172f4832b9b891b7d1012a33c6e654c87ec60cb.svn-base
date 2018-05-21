@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="re_content" padding>
+    <p class="_tittle">忘记密码</p>
+    <form [formGroup]="passwordForm" (ngSubmit)="resetPassword(passwordForm.value)">
+        <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;">
+            <ion-label color="dark">重置密码</ion-label>
+            <ion-input formControlName="password" placeholder="请输入8-20位包含数字和字母的密码" type="password"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.password.valid && passwordForm.controls.password.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!passwordForm.controls.password.valid && passwordForm.controls.password.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <br>
+        <br>
+        <button ion-button block type="submit" style="margin:0 auto;width:92%;height:3.33rem;" [disabled]="!passwordForm.valid||submitted">确定</button>
+        <br>
+    </form>
+</ion-content>

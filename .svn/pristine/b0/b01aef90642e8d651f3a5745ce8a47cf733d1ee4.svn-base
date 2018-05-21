@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>新手福利</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <img src="assets/images/novice/" class="banner">
+    <div class="coupon">
+        <p class="p1">
+            名字
+        </p>
+        <p class="p2">
+            有效期至:啊是大大撒大苏打大苏打实打实的啊实打实大苏打撒旦
+        </p>
+        <p class="p4">
+            <em>￥</em>100<br>
+        </p>
+    </div>
+</ion-content>

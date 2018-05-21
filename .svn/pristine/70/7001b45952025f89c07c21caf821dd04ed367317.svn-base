@@ -1,0 +1,34 @@
+page-or-detail {
+    .card {
+        width: 92%;
+        margin: 0 auto;
+        height: auto;
+        background: #FFFFFF;
+        box-shadow: 0 6px 20px 0 rgba(211, 211, 211, 0.50);
+        border-radius: 10px;
+        text-align: center;
+        padding: 0.5rem 0;
+        p {
+            font-family: PingFangSC-Regular;
+            font-size: 1.2rem;
+            color: #FF4C52;
+            letter-spacing: 0;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 40%;
+            height: auto;
+        }
+    }
+    p {
+        font-family: PingFangSC-Regular;
+        font-size: 1.2rem;
+        color: #000000;
+        letter-spacing: 0;
+        text-align: left;
+        line-height: 1.5;
+        padding: 0 1.25rem;
+    }
+}

@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title *ngIf="!globaldata.isMentionPassword">设置支付密码</ion-title>
+        <ion-title *ngIf="globaldata.isMentionPassword">修改支付密码</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <form *ngIf="!globaldata.isMentionPassword" [formGroup]="passwordForm" (ngSubmit)="setDrawPassword(passwordForm.value)">
+        <ion-item style="font-size:1.25rem;margin:0.8rem 0;">
+            <ion-label color="dark">支付密码</ion-label>
+            <ion-input formControlName="drawpassword" placeholder="请输入支付密码(6位数字)" type="password"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.drawpassword.valid && passwordForm.controls.drawpassword.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!passwordForm.controls.drawpassword.valid && passwordForm.controls.drawpassword.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <ion-item style="font-size:1.25rem;">
+            <ion-label color="dark">确认密码</ion-label>
+            <ion-input formControlName="confirmpassword" placeholder="请输入确认密码" type="password"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.confirmpassword.valid && passwordForm.controls.confirmpassword.dirty&&passwordForm.controls.drawpassword.value==passwordForm.controls.confirmpassword.value" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="(!passwordForm.controls.confirmpassword.valid||passwordForm.controls.drawpassword.value!=passwordForm.controls.confirmpassword.value)&&passwordForm.controls.confirmpassword.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <br>
+        <br>
+        <button ion-button block type="submit" style="margin:0 4%;width:92%;" [disabled]="!passwordForm.valid||submitted||passwordForm.controls.drawpassword.value!=passwordForm.controls.confirmpassword.value">确定</button>
+    </form>
+    <form *ngIf="globaldata.isMentionPassword" [formGroup]="drawpasswordForm" (ngSubmit)="modifyDrawPassword(drawpasswordForm.value)">
+        <ion-item style="font-size:1.25rem;margin-top:0.8rem;">
+            <ion-label color="dark">手机号码&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+            <ion-input disabled placeholder="{{globaldata.account}}" type="number"></ion-input>
+        </ion-item>
+        <ion-item style="font-size:1.25rem;height:4.5rem;">
+            <ion-label color="dark">新支付密码</ion-label>
+            <ion-input formControlName="password" placeholder="请输入新支付密码" type="password"></ion-input>
+            <ion-icon *ngIf="drawpasswordForm.controls.password.valid && drawpasswordForm.controls.password.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!drawpasswordForm.controls.password.valid && drawpasswordForm.controls.password.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <ion-item style="font-size:1.25rem;height:4.5rem;">
+            <ion-label color="dark">确认密码&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+            <ion-input formControlName="confirmpassword" placeholder="请输入确认密码" type="password"></ion-input>
+            <ion-icon *ngIf="drawpasswordForm.controls.confirmpassword.valid && drawpasswordForm.controls.confirmpassword.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!drawpasswordForm.controls.confirmpassword.valid && drawpasswordForm.controls.confirmpassword.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;">
+            <ion-label color="dark">验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+            <ion-input formControlName="verify" placeholder="请输入验证码" type="tel"></ion-input>
+            <ion-icon *ngIf="drawpasswordForm.controls.verify.valid && drawpasswordForm.controls.verify.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!drawpasswordForm.controls.verify.valid && drawpasswordForm.controls.verify.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+            <button ion-button item-end outline (click)="getVerifyCode();$event.preventDefault();$event.stopPropagation();" [disabled]="submitstate">{{verifystate}}</button>
+        </ion-item>
+        <br>
+        <br>
+        <button ion-button block style="margin:0 4%;width:92%;" [disabled]="!drawpasswordForm.valid||submitted">确定</button>
+    </form>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+<ion-content class="re_content" padding>
+    <p class="_tittle">注册</p>
+    <form [formGroup]="passwordForm" (ngSubmit)="register(passwordForm.value);$event.preventDefault();$event.stopPropagation();">
+        <div class="form_wrap">
+            <ion-item style="font-size:1.25rem;height:4.5rem;padding-left: 0;">
+                <ion-label color="dark">手机号码</ion-label>
+                <ion-input formControlName="account" placeholder="请输入手机号" type="tel"></ion-input>
+                <ion-icon *ngIf="passwordForm.controls.account.valid && passwordForm.controls.account.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+                <ion-icon *ngIf="!passwordForm.controls.account.valid && passwordForm.controls.account.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+            </ion-item>
+            <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;">
+                <ion-label color="dark">验证码&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+                <ion-input formControlName="verify" placeholder="验证码" type="tel"></ion-input>
+                <ion-icon *ngIf="passwordForm.controls.verify.valid && passwordForm.controls.verify.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+                <ion-icon *ngIf="!passwordForm.controls.verify.valid && passwordForm.controls.verify.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+                <button ion-button item-end outline (click)="getVerifyCode(passwordForm.controls.account.value);$event.preventDefault();$event.stopPropagation();" [disabled]="!passwordForm.controls.account.valid||submitstate">{{verifystate}}</button>
+            </ion-item>
+            <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;">
+                <ion-label color="dark">输入密码</ion-label>
+                <ion-input formControlName="password" placeholder="请输入8-20位包含数字和字母的密码" type="password"></ion-input>
+                <ion-icon *ngIf="passwordForm.controls.password.valid && passwordForm.controls.password.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+                <ion-icon *ngIf="!passwordForm.controls.password.valid && passwordForm.controls.password.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+            </ion-item>
+            <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;">
+                <ion-label color="dark">确认密码</ion-label>
+                <ion-input formControlName="confirmpassword" placeholder="请输入确认密码" type="password"></ion-input>
+                <ion-icon *ngIf="passwordForm.controls.confirmpassword.valid && passwordForm.controls.confirmpassword.dirty&&passwordForm.controls.password.value==passwordForm.controls.confirmpassword.value" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+                <ion-icon *ngIf="(!passwordForm.controls.confirmpassword.valid||passwordForm.controls.password.value!=passwordForm.controls.confirmpassword.value)&&passwordForm.controls.confirmpassword.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+            </ion-item>
+            <!-- <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;">
+                <ion-label color="dark">机构代码</ion-label>
+                <ion-input formControlName="assetunit" placeholder="请输入机构代码(选填)" type="number"></ion-input>
+                <ion-icon *ngIf="passwordForm.controls.assetunit.valid && passwordForm.controls.assetunit.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+                <ion-icon *ngIf="!passwordForm.controls.assetunit.valid && passwordForm.controls.assetunit.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+            </ion-item> -->
+            <ion-item style="font-size:1.25rem;height:4.5rem;border-bottom: none;padding-left: 0;">
+                <ion-label color="dark">推荐码&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+                <ion-input formControlName="recommend" placeholder="请输入推荐码" type="number"></ion-input>
+                <ion-icon *ngIf="passwordForm.controls.recommend.valid && passwordForm.controls.recommend.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+                <ion-icon *ngIf="!passwordForm.controls.recommend.valid && passwordForm.controls.recommend.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+            </ion-item>
+        </div>
+        <br>
+        <div class="tip">
+            <img src="assets/images/login/registered_selected@{{dpr}}x.png" tappable class="radio" *ngIf="show; else elseBlock" (click)="agree()">
+            <ng-template #elseBlock>
+                <img src="assets/images/login/registered_select_nor@{{dpr}}x.png" tappable class="radio" (click)="agree()">
+            </ng-template>
+            <p>我已阅读并同意<em class="protocol" tappable (click)='goNextPage()'>《服务协议》</em></p>
+        </div>
+        <br>
+        <button ion-button block type="submit" style="margin:0 auto;width:92%;height:3.33rem;" [disabled]="!passwordForm.valid||submitted||!show||passwordForm.controls.password.value!=passwordForm.controls.confirmpassword.value">立即注册</button>
+        <br>
+    </form>
+</ion-content>

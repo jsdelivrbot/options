@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>BTC</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="top_wrap">
+        <p class="p1">BTC</p>
+        <p class="p2">${{tempSocketData.nowPrice/7|number: '1.0-2'}}</p>
+        <p class="p3">交易量 {{tempSocketData.totalVolume}}</p>
+        <p class="p4">￥{{tempSocketData.nowPrice|number: '1.0-2'}}&nbsp;&nbsp;{{quoteRate|number: '1.0-2'}}%</p>
+    </div>
+    <ion-item>
+        <ion-label>可用资金<em>&nbsp;&nbsp;{{funds}}元</em></ion-label>
+        <button ion-button item-end outline [navPush]="recharge">充值</button>
+    </ion-item>
+    <ion-item>
+        <ion-label>交易数量</ion-label>
+        <button item-end (click)="firstChoose(x)" class="squar_but" [ngClass]="{'_active':choose1==x}" *ngFor="let x of tradeNumOptions">{{x}}手</button>
+    </ion-item>
+    <ion-item>
+        <ion-label>杠杆</ion-label>
+        <button item-end (click)="secChoose(x)" class="squar_but" [ngClass]="{'_active':choose2==x}" *ngFor="let x of [1,10]">{{x}}X可持仓过夜</button>
+    </ion-item>
+
+    <ion-item class="mid_item">
+        <img (click)="setPriceState()" item-start *ngIf="priceState" src="assets/images/my/icon_dot_pre@3x.png">
+        <img (click)="setPriceState()" item-start *ngIf="!priceState" src="assets/images/my/icon_dot_nor@3x.png">
+        <ion-label (click)="setPriceState()">市价买入</ion-label>
+        <div item-end>
+            <div class="mid_plus">
+                <button (click)="setPrice('subtract')" [disabled]="priceState">-</button>
+                <input type="number" (blur)="blur()" [(ngModel)]="priceSet">
+                <button (click)=" setPrice( 'plus') " [disabled]="priceState">+</button>
+            </div>
+        </div>
+    </ion-item>
+    <ion-item>
+        <ion-label>保证金</ion-label>
+        <ion-note item-end>{{deposit*choose1*choose2_step}}元</ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-label>交易综合费</ion-label>
+        <ion-note item-end>{{totalFee}}元</ion-note>
+    </ion-item>
+    <ion-item name="set_input">
+        <ion-label>触发止盈</ion-label>
+        <input item-end type="number" class="item_input" [(ngModel)]="priceUp">
+        <!-- <ion-note item-end>{{deposit*stoplossPercent*stopprofitMutipleLoss*choose1}}元</ion-note> -->
+    </ion-item>
+
+    <ion-item name="set_input">
+        <ion-label>触发止损</ion-label>
+        <input item-end type="number" class="item_input" [(ngModel)]="priceDown">
+        <!-- <button item-end (click)="secChoose(1,deposit*stoplossPercent*choose1)" class="squar_but" [ngClass]="{'_active':choose2==1}">-{{deposit*stoplossPercent*choose1}}元</button> -->
+    </ion-item>
+    <ion-item>
+        <ion-label>合计</ion-label>
+        <ion-note item-end>{{totalPrice}}元</ion-note>
+    </ion-item>
+</ion-content>
+<ion-footer>
+    <div class="_footer">
+        <button class="buyUp" *ngIf="buyState=='buyup'" (click)="buyIt('V')" [disabled]="but_state">{{but1_text}}</button>
+        <button class="buyDown" (click)="buyIt('X')" *ngIf="buyState=='buydown'" [disabled]="but_state">{{but2_text}}</button>
+    </div>
+</ion-footer>
+<div class="modal_mock" *ngIf="modal_mock" [@modalMock]></div>

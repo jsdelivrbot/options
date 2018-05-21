@@ -1,0 +1,11 @@
+page-trade {
+    .tabs-ios .tab-button[aria-selected=true] {
+        span {
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid color($colors, primary)!important;
+        }
+    }
+    .tabs-ios[tabsPlacement=top] .tabbar {
+        border-bottom: unset!important;
+    }
+}

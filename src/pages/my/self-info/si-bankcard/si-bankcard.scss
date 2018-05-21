@@ -1,0 +1,111 @@
+page-si-bankcard {
+    .sb_card {
+        height: 7.5rem;
+        text-align: center;
+        box-shadow: 0 4px 20px 0 rgba(204, 204, 204, 0.50);
+    }
+    em {
+        font-family: PingFangSC-Regular;
+        font-size: 1.5rem;
+        color: #999999;
+        letter-spacing: 2px;
+        line-height: 7.5rem;
+        font-style: normal;
+        ion-icon {
+            font-size: 3.5rem;
+            position: relative;
+            top: 0.6rem;
+            left: -1rem;
+        }
+    }
+    .sb_p {
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 1rem;
+        color: #999999;
+        letter-spacing: 2px;
+    }
+    .bank_card {
+        position: relative;
+        height: 7.5rem;
+        box-shadow: 0 4px 20px 0 rgba(204, 204, 204, 0.50);
+        img {
+            width: 4.17rem;
+            height: 4.17rem;
+            position: absolute;
+            top: 1.67rem;
+            left: 1rem;
+        }
+        .p1 {
+            position: absolute;
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #333333;
+            letter-spacing: 0;
+            font-weight: bold;
+            left: 5.83rem;
+            top: 1.9rem;
+        }
+        .p2 {
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #333333;
+            letter-spacing: 0;
+            position: absolute;
+            left: 5.83rem;
+            top: 3.5rem;
+        }
+        .p3 {
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #333333;
+            letter-spacing: 4px;
+            position: absolute;
+            left: 5.83rem;
+            top: 4.83rem;
+        }
+    }
+    //银行卡颜色分类
+    // .zgyh {
+    //     background: #C8394D;
+    // }
+    // .nyyh {
+    //     background: #049982;
+    // }
+    // .jsyh {
+    //     background: #3F74BD;
+    // }
+    // .zxyh {
+    //     background: #C8394D;
+    // }
+    // .pfyh {
+    //     background: #3F74BD;
+    // }
+    // .gsyh {
+    //     background: #C8394D;
+    // }
+    // .zsyh {
+    //     background: #C8394D;
+    // }
+    // .jtyh {
+    //     background: #3F74BD;
+    // }
+    // .msyh {
+    //     background: #3F74BD;
+    // }
+    // .xyyh {
+    //     background: #3F74BD;
+    // }
+    // .gdyh {
+    //     background: #F1B92D;
+    // }
+    // .gfyh {
+    //     background: #C8394D;
+    // }
+    // .hfyh {
+    //     background: #C8394D;
+    // }
+    // .payh {
+    //     background: #C8394D;
+    // }
+}

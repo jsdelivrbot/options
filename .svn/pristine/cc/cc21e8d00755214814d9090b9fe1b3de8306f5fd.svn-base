@@ -1,0 +1,9 @@
+page-si-loginpassword {
+    .item-ios {
+        padding-left: 0;
+        .item-inner {
+            padding: 0 1.25rem;
+            border-bottom: 1px solid rgba(229, 229, 229, 0.7)!important;
+        }
+    }
+}

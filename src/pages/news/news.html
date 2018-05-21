@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>资讯</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-tabs #infoTabs selectedIndex="0" tabsPlacement="top" id="tabs_special">
+        <ion-tab [root]="tab1Root" tabTitle="资讯"></ion-tab>
+        <ion-tab [root]="tab2Root" tabTitle="原油"></ion-tab>
+        <ion-tab [root]="tab3Root" tabTitle="金银"></ion-tab>
+        <ion-tab [root]="tab4Root" tabTitle="公告" tabBadge="{{badge}}" tabBadgeStyle="#DF3F43"></ion-tab>
+    </ion-tabs>
+</ion-content>

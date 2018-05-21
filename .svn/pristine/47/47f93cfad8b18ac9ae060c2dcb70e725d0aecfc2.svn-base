@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>账户设置</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!-- <ion-item class="sf_topitem">
+        <ion-avatar item-start>
+            <img class="info_img" src="assets/images/my/my_icon_information@3x.png">
+        </ion-avatar>
+        <p>账户名称</p>
+    </ion-item> -->
+    <button *ngIf='!globalData.authState' ion-item (click)="gochildpage('实名认证')" no-lines class="my_item">
+        <ion-label><em>实名认证</em></ion-label>
+        <ion-note item-end><strong>{{globalData.authState?'已认证':'未认证'}}</strong></ion-note>
+    </button>
+    <ion-item *ngIf='globalData.authState' no-lines class="my_item">
+        <ion-label><em>实名认证</em></ion-label>
+        <ion-note item-end><strong>已认证</strong></ion-note>
+    </ion-item>
+    <ion-item no-lines class="my_item">
+        <ion-label><em>手机号码</em></ion-label>
+        <ion-note item-end><strong>{{globalData.account|phoneHide}}</strong></ion-note>
+    </ion-item>
+    <button ion-item (click)="gochildpage('我的银行卡')" no-lines class="my_item">
+        <ion-label><em>银行卡</em></ion-label>
+        <ion-note item-end><strong>{{globalData.cardCount}}</strong></ion-note>
+    </button>
+    <div class="nt"></div>
+    <button ion-item (click)="gochildpage('登录密码')" no-lines class="my_item">
+        <ion-label><em>登录密码</em></ion-label>
+        <ion-note item-end><strong>修改</strong></ion-note>
+    </button>
+    <button ion-item (click)="gochildpage('提现密码')" no-lines class="my_item">
+        <ion-label><em>支付密码</em></ion-label>
+        <ion-note item-end><strong>{{globalData.isMentionPassword?'修改':'未设置'}}</strong></ion-note>
+    </button>
+    <br>
+    <br>
+    <button ion-button block style="margin:0 auto;width:92%;height:3.33rem;" *ngIf="globalData.account" (click)="logout()">安全退出</button>
+</ion-content>

@@ -1,0 +1,33 @@
+page-sb-addcard {
+    ion-label {
+        flex: unset!important;
+    }
+    .item-ios {
+        padding-left: 0;
+        .item-inner {
+            padding: 0 1.25rem;
+            border-bottom: 1px solid rgba(229, 229, 229, 0.7)!important;
+        }
+    }
+    .sa_p1 {
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 1rem;
+        color: #999999;
+        letter-spacing: 2px;
+    }
+    .sa_p2 {
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 1.25rem;
+        color: #000000;
+        letter-spacing: 2px;
+    }
+    .tip_p {
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 1rem;
+        color: #FF4C52;
+        letter-spacing: 0;
+    }
+}

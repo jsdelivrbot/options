@@ -1,0 +1,86 @@
+page-searchModal {
+    .searchbar-ios .searchbar-clear-icon {
+        background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='fg-color' d='M403.1,108.9c-81.2-81.2-212.9-81.2-294.2,0s-81.2,212.9,0,294.2c81.2,81.2,212.9,81.2,294.2,0S484.3,190.1,403.1,108.9z M352,340.2L340.2,352l-84.4-84.2l-84,83.8L160,339.8l84-83.8l-84-83.8l11.8-11.8l84,83.8l84.4-84.2l11.8,11.8L267.6,256L352,340.2z'/></svg>")!important;
+    }
+    .hot_stock {
+        width: 100%;
+        position: relative;
+        padding-top: 3.25rem;
+        img {
+            width: 1.25rem;
+            height: 1.25rem;
+            position: absolute;
+            left: 1.25rem;
+            top: 1.25rem;
+        }
+        .p1 {
+            position: absolute;
+            left: 2.9rem;
+            top: 1.25rem;
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #000000;
+            letter-spacing: 0;
+        }
+        table {
+            width: 100%;
+            tr {
+                border-bottom: 1px solid #CCCCCC;
+                td {
+                    height: 3.3rem;
+                    font-family: PingFangSC-Regular;
+                    font-size: 1.25rem;
+                    color: #000000;
+                    letter-spacing: 0;
+                    width: 33%;
+                    overflow: hidden;
+                }
+                td:nth-child(1) {
+                    text-align: left;
+                    padding-left: 1.25rem;
+                }
+                td:nth-child(2) {
+                    text-align: center;
+                }
+                td:nth-child(3) {
+                    text-align: right;
+                    padding-right: 1.25rem;
+                }
+            }
+            tr:first-child {
+                td {
+                    font-family: PingFangSC-Regular;
+                    font-size: 1.25rem;
+                    color: #999999;
+                    letter-spacing: 0;
+                    height: 2rem;
+                }
+                border-bottom:unset;
+            }
+        }
+    }
+    .record_stock {
+        margin-top: 1.25rem;
+        .p1 {
+            color: #333333!important;
+        }
+        tr:first-child {
+            td {
+                color: #000000!important;
+            }
+            border-bottom: 1px solid #CCCCCC !important;
+        }
+        ion-item {
+            text-align: center;
+            ion-label {
+                font-family: PingFangSC-Regular!important;
+                font-size: 1.25rem!important;
+                color: #999999!important;
+                letter-spacing: 0!important;
+            }
+        }
+    }
+    .search_stock {
+        padding-top: 1rem!important;
+    }
+}

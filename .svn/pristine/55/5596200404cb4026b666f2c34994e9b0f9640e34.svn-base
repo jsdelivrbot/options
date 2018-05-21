@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="re_content" padding>
+    <p class="_tittle">提现密码</p><br>
+    <p class="sub_tittle">请设置提现密码</p><br>
+    <form [formGroup]="passwordForm" (ngSubmit)="resetPassword(passwordForm.value)">
+        <div class="input_wrap">
+            <ion-input type="tel" autofocus="autofocus" maxlength="6" formControlName="drawpassword"></ion-input>
+            <div *ngFor="let x of [1,2,3,4,5,6]">
+                <div *ngIf="passwordForm.controls.drawpassword.value.length>=x"></div>
+            </div>
+        </div>
+        <br>
+        <p class="tip">不建议设置生日或连续数字</p>
+        <br>
+        <button ion-button block type="submit" style="margin:0 auto;width:92%;height:3.33rem;" [disabled]="!passwordForm.valid||submitted">完成</button>
+        <br>
+    </form>
+</ion-content>

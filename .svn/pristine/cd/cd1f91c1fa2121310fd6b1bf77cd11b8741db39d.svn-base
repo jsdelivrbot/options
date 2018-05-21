@@ -1,0 +1,65 @@
+<ion-header *ngIf="nativeService.isMobile()">
+    <ion-navbar>
+        <ion-title>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="bill" tappable>
+        <p class="p2 th_light" *ngIf="globalData.userId">资产总额</p>
+        <p class="p3 th_light" *ngIf="globalData.userId">￥{{globalData.capital|number: '1.0-2'}}</p>
+
+        <button class="my_but1" *ngIf="!globalData.userId" ion-button (click)="openModal('login');$event.stopPropagation();$event.preventDefault();">登录</button>
+        <button class="my_but2" *ngIf="!globalData.userId" ion-button outline (click)="openModal('register');$event.stopPropagation();$event.preventDefault();">注册</button>
+    </div>
+    <div style="width:100%;height:1rem;background:#f4f4f4;" *ngIf="!globalData.simulateAccount"></div>
+    <button ion-item no-lines class="my_item" *ngIf="!globalData.simulateAccount" (click)="goNextPage('bill')">
+        <ion-avatar item-start>
+            <img src="assets/images/my/my_icon_account@{{dpr}}x.png">
+        </ion-avatar>
+        账户明细
+    </button>
+    <div style="width:100%;height:1rem;background:#f4f4f4;" *ngIf="!globalData.simulateAccount"></div>
+    <button ion-item no-lines class="my_item" *ngIf="!globalData.simulateAccount" (click)="goNextPage('recharge')">
+        <ion-avatar item-start>
+            <img src="assets/images/my/my_icon_recharge@{{dpr}}x.png">
+        </ion-avatar>
+        充值
+    </button>
+    <!-- <button ion-item no-lines class="my_item" *ngIf="!globalData.simulateAccount" (click)="goNextPage('offLineRecharge')">
+        <ion-avatar item-start>
+            <img src="assets/images/my/my_icon_recharge@{{dpr}}x.png">
+        </ion-avatar>
+        线下充值
+    </button> -->
+    <button ion-item no-lines class="my_item" *ngIf="!globalData.simulateAccount" (click)="goNextPage('withdraw')">
+        <ion-avatar item-start>
+            <img src="assets/images/my/my_icon_withdraw@{{dpr}}x.png">
+        </ion-avatar>
+        提现
+    </button>
+    <div style="width:100%;height:1rem;background:#f4f4f4;"></div>
+    <button ion-item no-lines class="my_item" *ngIf="globalData.showModule" (click)="openModal('notice')">
+        <ion-avatar item-start>
+            <img src="assets/images/my/my_icon_notice@{{dpr}}x.png">
+        </ion-avatar>
+        公告
+    </button>
+    <button ion-item no-lines class="my_item" *ngIf="globalData.showModule" (click)="openModal('set')">
+        <ion-avatar item-start>
+            <img src="assets/images/my/my_icon_help@{{dpr}}x.png">
+        </ion-avatar>
+        帮助与客服
+    </button>
+    <div style="width:100%;height:1rem;background:#f4f4f4;"></div>
+    <button ion-item no-lines class="my_item" (click)="goNextPage('selfInfo')">
+        <ion-avatar item-start>
+            <img src="assets/images/my/my_icon_setting@{{dpr}}x.png">
+        </ion-avatar>
+        账户设置
+    </button>
+    <br>
+</ion-content>

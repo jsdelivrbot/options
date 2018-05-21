@@ -1,0 +1,49 @@
+page-novice-welfare {
+    banner {
+        width: 100%;
+        height: 12.5rem;
+        margin-bottom: 0.85rem;
+    }
+    .coupon {
+        width: 92%;
+        height: 7.5rem;
+        background: url('../../../../assets/images/my/welfare_bg@2x.png') no-repeat;
+        background-size: 100% 100%;
+        margin: 0.6rem auto;
+        position: relative;
+        p {
+            position: absolute;
+            em {
+                font-style: normal;
+                font-size: 1.5rem;
+            }
+        }
+        .p1 {
+            font-family: PingFangSC-Medium;
+            font-size: 1.5rem;
+            color: #DF3F43;
+            letter-spacing: 0;
+            left: 4%;
+            top: 1rem;
+            font-weight: 600;
+        }
+        .p2 {
+            font-family: PingFangSC-Regular;
+            font-size: 1rem;
+            color: #999999;
+            letter-spacing: 0;
+            left: 4%;
+            top: 3.17rem;
+            width: 58%;
+        }
+        .p4 {
+            font-family: PingFangSC-Medium;
+            font-size: 2.54rem;
+            color: #FF8343;
+            letter-spacing: 2px;
+            left: 75.5%;
+            top: 2rem;
+            font-weight: 600;
+        }
+    }
+}

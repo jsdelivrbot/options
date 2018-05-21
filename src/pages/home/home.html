@@ -1,0 +1,147 @@
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>点点盈</ion-title>
+        <button class="head_but div_redbg" item-end ion-button (click)="goNextPage('customerservice')">
+            <img class="home_headimg" src="assets/images/home/home_nav_icon_service@{{dpr}}x.png">
+            <p class="home_headp th_second" >&nbsp;客服</p>
+        </button>
+    </ion-navbar>
+</ion-header> -->
+<ion-content>
+    <div class="home_banner">
+        <ion-slides pager autoplay='3000' loop='true' tappable *ngIf="bannerdata.length!=0">
+            <ion-slide *ngFor="let banner of bannerdata" (click)="goNextPage('advertise',banner.link)">
+                <img style="width:100%;height:auto;" src="{{banner.imgUrl}}">
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <div class="home_tip " tappable (click)="goNextPage('notice');$event.preventDefault();$event.stopPropagation();">
+        <p class='p1'><img class="img1" src="assets/images/home/home_icon_notice@{{dpr}}x.png">&nbsp;&nbsp;公告</p>
+        <p class='p2'>更多<img class="img2" src="assets/images/home/icon_right@{{dpr}}x.png"></p>
+        <div class='marqueen'>
+            <span *ngFor="let x of noticeData">
+                <p tappable [@flyTop]="'active'" *ngIf='x.show'  (click)="goNextPage('detail',x.id);$event.preventDefault();$event.stopPropagation();">{{x.title}}</p>
+            </span>
+        </div>
+    </div>
+    <div class='home_stock'>
+        <table>
+            <tr>
+                <td>{{exponData[0].stockName}}</td>
+                <td>{{exponData[1].stockName}}</td>
+                <td>{{exponData[2].stockName}}</td>
+            </tr>
+            <tr>
+                <td [ngClass]="{'font_red':exponData[0].changeExtent>=0}">
+                    {{exponData[0].nowPrice|number: '1.0-2'}}</td>
+                <td [ngClass]="{'font_red':exponData[1].changeExtent>=0}">
+                    {{exponData[1].nowPrice|number: '1.0-2'}}</td>
+                <td [ngClass]="{'font_red':exponData[2].changeExtent>=0}">
+                    {{exponData[2].nowPrice|number: '1.0-2'}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <span [ngClass]="{'font_red':exponData[0].changeExtent>=0}" *ngIf='exponData[0].changeExtent>0'>+</span>
+                    <span [ngClass]="{'font_red':exponData[0].changeExtent>=0}">{{exponData[0].changeExtent|number: '1.0-2'}}</span>&nbsp;
+                    <span [ngClass]="{'font_red':exponData[0].changeRate>=0}" *ngIf='exponData[0].changeRate>0'>+</span>
+                    <span [ngClass]="{'font_red':exponData[0].changeRate>=0}">{{exponData[0].changeRate|number: '1.0-2'}}%</span>
+                </td>
+                <td>
+                    <span [ngClass]="{'font_red':exponData[1].changeExtent>=0}" *ngIf='exponData[1].changeExtent>0'>+</span>
+                    <span [ngClass]="{'font_red':exponData[1].changeExtent>=0}">{{exponData[1].changeExtent|number: '1.0-2'}}</span>&nbsp;
+                    <span [ngClass]="{'font_red':exponData[1].changeRate>=0}" *ngIf='exponData[1].changeRate>0'>+</span>
+                    <span [ngClass]="{'font_red':exponData[1].changeRate>=0}">{{exponData[1].changeRate|number: '1.0-2'}}%</span>
+                </td>
+                <td>
+                    <span [ngClass]="{'font_red':exponData[2].changeExtent>=0}" *ngIf='exponData[2].changeExtent>0'>+</span>
+                    <span [ngClass]="{'font_red':exponData[2].changeExtent>=0}">{{exponData[2].changeExtent|number: '1.0-2'}}</span>&nbsp;
+                    <span [ngClass]="{'font_red':exponData[2].changeRate>=0}" *ngIf='exponData[2].changeRate>0'>+</span>
+                    <span [ngClass]="{'font_red':exponData[2].changeRate>=0}">{{exponData[2].changeRate|number: '1.0-2'}}%</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="home_sec">
+        <div tappable (click)="goNextPage('trade')" class='div_bg'>
+            <img src="assets/images/home/home_btn_options.png" alt="">
+        </div>
+        <div tappable (click)="goNextPage('newBee')" class='div_bg'>
+            <img src="assets/images/home/home_btn_newbie.png" alt="">
+        </div>
+    </div>
+    <div class="home_list">
+        <div class="hl_seg">
+            <img src="assets/images/home/home_icon_newest@{{dpr}}x.png">
+            <ion-segment [(ngModel)]="tabs">
+                <ion-segment-button value="tabs1">
+                    最新交易
+                    <span></span>
+                </ion-segment-button>
+                <ion-segment-button value="tabs2">
+                    收益排行榜
+                    <span></span>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+
+        <div [ngSwitch]="tabs">
+            <ion-list *ngSwitchCase="'tabs1'">
+                <div class="list1" *ngFor='let x of tradeData' [@fade]="'active'">
+                    <img src="assets/images/home/home_icon_head@{{dpr}}x.png">
+                    <p class="p1">{{x.realName|nameHide}}</p>
+                    <p class="p2">{{x.addTime}}</p>
+                    <div class='cont'>
+                        <p class="p3">申购&nbsp;&nbsp;&nbsp;&nbsp;<em style='color:#FF5757;font-style:normal;'>{{x.stockName}}</em></p>
+                        <p class="p4">名义本金&nbsp;&nbsp;&nbsp;&nbsp;<em style='color:#FF5757;font-style:normal;'>{{x.principal}}元</em></p>
+                    </div>
+
+                </div>
+            </ion-list>
+
+            <ion-list *ngSwitchCase="'tabs2'">
+                <div class="list2" *ngFor='let x of rankData;let i=index' [@fade]="'active'">
+                    <div>
+                        <img *ngIf='i==0' src="assets/images/home/home_icon_gold@{{dpr}}x.png">
+                        <img *ngIf='i==1' src="assets/images/home/home_icon_silver@{{dpr}}x.png">
+                        <img *ngIf='i==2' src="assets/images/home/home_icon_copper@{{dpr}}x.png">
+                        <img *ngIf='i==3' src="assets/images/home/home_icon_4@{{dpr}}x.png">
+                        <img *ngIf='i==4' src="assets/images/home/home_icon_5@{{dpr}}x.png">
+                    </div>
+                    <div>
+                        <table class="table1">
+                            <tr>
+                                <td>收益率</td>
+                            </tr>
+                            <tr>
+                                <td>{{x.incomeRate|number: '1.0-2'}}%</td>
+                            </tr>
+                            <tr>
+                                <td>{{x.stockName}} {{x.stockCode}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="table2">
+                            <tr>
+                                <td>买价</td>
+                                <td>盈亏</td>
+                            </tr>
+                            <tr>
+                                <td>{{x.buyPrice|number: '1.0-2'}}</td>
+                                <td>{{x.profitLoss|number: '1.0-2'}}</td>
+                            </tr>
+                            <tr>
+                                <td>卖价</td>
+                                <td>名义本金</td>
+                            </tr>
+                            <tr>
+                                <td>{{x.sellPrice|number: '1.0-2'}}</td>
+                                <td>{{x.principal|number: '1.0-2'}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </ion-list>
+        </div>
+    </div>
+</ion-content>

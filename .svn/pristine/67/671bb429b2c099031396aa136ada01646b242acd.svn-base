@@ -1,0 +1,42 @@
+<div tappable class="con_wrap" (click)="closeModal();$event.preventDefault();$event.stopPropagation();">
+    <div class="confirm_1" (click)="doNothing();$event.preventDefault();$event.stopPropagation();">
+        <ion-icon name="md-close" (click)="closeModal();$event.preventDefault();$event.stopPropagation();"></ion-icon>
+        <p class="p1">询价结果</p>
+        <table class="table1">
+            <tr>
+                <td>标的股票</td>
+                <td>{{subData.stockName}}{{subData.stockCode}}</td>
+            </tr>
+            <tr>
+                <td>名义本金</td>
+                <td>{{subData.principal|number: '1.0-2'}}</td>
+            </tr>
+            <tr>
+                <td>行权周期</td>
+                <td>{{subData.duration}}</td>
+            </tr>
+            <tr>
+                <td>权利金费率</td>
+                <td>{{subData.expenseRate|number: '1.0-2'}}%</td>
+            </tr>
+            <tr>
+                <td>权利金</td>
+                <td>{{subData.expense|number: '1.0-2'}}</td>
+            </tr>
+        </table>
+        <table class="table2" *ngIf='subData.profitInfos.length!=0'>
+            <tr>
+                <td>预期涨幅</td>
+                <td>盈亏比例</td>
+                <td>盈利金额</td>
+            </tr>
+            <tr *ngFor='let x of subData.profitInfos' [ngClass]="{'font_red':true}">
+                <td>{{x.riseRate}}</td>
+                <td>{{x.profitLossRatio}}</td>
+                <td>{{x.profitAmount}}</td>
+            </tr>
+        </table>
+        <p class="p2">点击"立即认购"代表您已同意<a (click)="openBowser()">《委托合作协议》</a></p>
+        <button ion-button (click)="pay();$event.preventDefault();$event.stopPropagation();">立即认购</button>
+    </div>
+</div>

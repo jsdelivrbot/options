@@ -1,0 +1,113 @@
+page-recharge {
+    .top_choose {
+        height: auto;
+        width: 96%;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+        position: relative;
+        .p2 {
+            font-family: PingFangSC-Medium;
+            font-size: 1.25rem;
+            color: #333333;
+            letter-spacing: 0;
+            position: absolute;
+            right: 0;
+            top: 4.5rem;
+        }
+        input {
+            position: absolute;
+            width: 100%;
+            background: #FFFFFF;
+            border: none;
+            border-bottom: 1px solid #CCCCCC;
+            padding-bottom: 3px;
+        }
+        input::-webkit-input-placeholder {
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #CCCCCC;
+            letter-spacing: 1px;
+        }
+        .but_wrap {
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            top: 3rem;
+            .active {
+                background: color($colors, primary);
+                p {
+                    color: #FFFFFF;
+                }
+            }
+            &>div {
+                transition: .3s ease-in-out;
+                width: 30%;
+                border-radius: 0.33rem;
+                height: 2.5rem;
+                text-align: center;
+                border: 1px solid color($colors, primary);
+                margin-right: 5%;
+                margin-bottom: 0.83rem;
+                p {
+                    font-family: PingFangSC-Regular;
+                    font-size: 1rem;
+                    color: color($colors, primary);
+                    letter-spacing: 0;
+                    line-height: 2.5rem;
+                }
+            }
+            &>div:last-child,
+            &>div:nth-child(3),
+            &>div:nth-child(6) {
+                margin-right: 0;
+            }
+            .active {
+                background: color($colors, primary);
+                p {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    .money_pay {
+        .pay_type {
+            height: 2.33rem;
+            p {
+                font-family: PingFangSC-Regular;
+                font-size: 1.25rem;
+                letter-spacing: 2px;
+                line-height: 2.33rem;
+                padding-left: 1.25rem;
+            }
+        }
+        .item-inner {
+            border-bottom: none!important;
+        }
+    }
+    .list-ios {
+        margin: 0 !important;
+    }
+    .rc_icon {
+        width: 2.08rem;
+        height: 2.08rem;
+    }
+    .money_num {
+        font-style: normal;
+        color: color($colors, primary);
+    }
+    .radio-ios .radio-checked .radio-inner {
+        display: none!important;
+    }
+    .radio-checked {
+        background: url('../assets/images/my/icon_dot_pre@3x.png')!important;
+        background-size: 100% 100%!important;
+    }
+    .radio-ios .radio-icon {
+        width: 1.67rem;
+        height: 1.67rem;
+        background: url('../assets/images/my/icon_dot_nor@3x.png');
+        background-size: 100% 100%;
+    }
+}

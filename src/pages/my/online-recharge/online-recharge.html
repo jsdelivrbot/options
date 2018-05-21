@@ -1,0 +1,9 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>入金申请</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-tabs #thirTabs selectedIndex="0" tabsPlacement="top" id="tabs_special">
+    <ion-tab [root]="tab1Root" [rootParams]="money" tabTitle="支付宝"></ion-tab>
+    <ion-tab [root]="tab2Root" [rootParams]="money" tabTitle="银行卡"></ion-tab>
+</ion-tabs>

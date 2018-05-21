@@ -1,0 +1,8 @@
+page-promotion {
+    .tabbar {
+        opacity: 1!important;
+    }
+    .tabs-ios .tab-button[aria-selected=true] {
+        border-bottom: 2px solid #DF3F43!important;
+    }
+}

@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>入金申请记录</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="正在刷新..."></ion-refresher-content>
+    </ion-refresher>
+    <table class='or_table' *ngFor='let x of data'>
+        <tr>
+            <td style="color: #999999;">订单号：{{x.orderNo}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>入金金额：{{x.amount}}</td>
+            <td style='text-align: right;'>入金状态：<strong [ngClass]="{'color1':x.status=='待支付','color2':x.status=='已标记','color3':x.status=='已入账','color4':x.status=='已失效'}">{{x.status}}</strong></td>
+        </tr>
+        <tr>
+            <td>入金渠道：{{x.way}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="color: #999999;">申请时间：{{x.addTime}}</td>
+            <td style='text-align: right;position: relative;'>
+                <button *ngIf="x.status=='待支付'" ion-button block (click)="sub(x.id)" style="margin:0 auto;width:6rem;height:3rem;position: absolute;right:1.25rem;top:-0.8rem;font-size: 1.25rem;">标记已付款</button>
+            </td>
+        </tr>
+    </table>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingText="正在加载" loadingSpinner="bubbles" threshold="2rem"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <div class="bot_line" *ngIf="showline">
+        <p>-----------------&nbsp;&nbsp;别扯了，我也是有底线的&nbsp;&nbsp;-----------------</p>
+    </div>
+    <div *ngIf="showit">
+        <img style="width:20%;margin-left:40%;margin-top:35%;" src="assets/images/track/documentary_popup_icon_lack@{{dpr}}x.png">
+        <p style="text-align:center;font-family: PingFangSC-Regular;margin-top:1.25rem;font-size: 1.25rem;color: #CCCCCC;letter-spacing: 2px;">暂无数据</p>
+    </div>
+</ion-content>

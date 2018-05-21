@@ -1,0 +1,43 @@
+<ion-content>
+    <img class="back_img" src="assets/images/home/icon_back@{{dpr}}x.png" (click)="goBack()">
+    <div class="ld_wrap">
+        <video preload="auto" *ngIf="isMobile" tappable id="video2" ishivideo="true" isrotate="true" autoHide="false" poster="assets/images/live/live_img.png" [src]="videoData.url" data-setup='{}'></video>
+        <video preload="auto" *ngIf="!isMobile" controls="controls" tappable poster="assets/images/live/live_img.png" [src]="videoData.url" data-setup='{}'></video>
+    </div>
+    <p class="ld_title">{{videoData.title}}</p>
+    <div class="ld_tip">
+        <p class="author">
+            {{videoData.addTime}}
+        </p>
+        <p class="audience">
+            <img src="assets/images/live/live_icon_view@{{dpr}}x.png"> 100
+        </p>
+    </div>
+    <div class="ld_comment" #comment>
+        <p class="ld_tit">
+            全部评论（{{totalRecord||0}}）
+        </p>
+        <div class="other_speak" *ngFor="let x of messageData">
+            <div>
+                <img src="{{x.portrait}}">
+            </div>
+            <div>
+                <div style="min-width:5rem;text-align:left;">
+                    <p>{{x.nickname|nameReplace}}</p>
+                    <p>{{x.addTime }}</p>
+                </div>
+                <p>{{x.content}}</p>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="fix_wrap" id="set_input">
+        <div class="foot_wrap" #foot>
+            <input type="text" placeholder="说点什么吧" [(ngModel)]="input_cont">
+            <button (click)="send()">发送</button>
+        </div>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingText="正在加载" loadingSpinner="bubbles" threshold="2rem"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

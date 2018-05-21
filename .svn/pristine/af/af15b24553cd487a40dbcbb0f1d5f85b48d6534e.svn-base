@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>&nbsp;</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="tittle_wrap">
+        <p>跟单</p>
+        <p tappable (click)="goNextPage('mine')">我的跟单</p>
+    </div>
+    <div class="item_wrap" tappable (click)="goNextPage('detail',x.id)" *ngFor="let x of data">
+        <img class="avatar" src="{{x.portrait }}">
+        <div class="author_wrap">
+            <p class="author">{{x.nickname}}</p>
+            <img class="vip" src="assets/images/home/home_earnings_icon_yellow@{{dpr}}x.png">
+            <img class="level" src="assets/images/track/documentary_icon_100@{{dpr}}x.png">
+        </div>
+        <p class="track_num">{{x.followCount}}人跟单</p>
+        <div class="description">
+            <p>{{x.description}}</p>
+        </div>
+        <table>
+            <tr>
+                <td>{{x.totalIncome}}</td>
+                <td>{{x.day7Income}}</td>
+                <td>{{x.profit}}</td>
+            </tr>
+            <tr>
+                <td>总收益</td>
+                <td>七日收益</td>
+                <td>净利润</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="noData">
+        <img style="width:20%;margin-left:40%;margin-top:35%;" src="assets/images/track/documentary_popup_icon_lack@{{dpr}}x.png">
+        <p style="text-align:center;font-family: PingFangSC-Regular;margin-top:1.25rem;font-size: 1.25rem;color: #CCCCCC;letter-spacing: 2px;">暂无跟单</p>
+    </div>
+</ion-content>

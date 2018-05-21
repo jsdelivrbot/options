@@ -1,0 +1,115 @@
+page-my {
+    .my_top {
+        width: 100%;
+        height: 8rem;
+        text-align: left;
+        padding-left: 1.25rem;
+        position: relative;
+        p:nth-child(1) {
+            font-family: PingFangSC-Medium;
+            font-size: 2.67rem;
+            color: #333333;
+            letter-spacing: 0;
+            padding-top: 3.67rem;
+        }
+        img {
+            position: absolute;
+            right: 1.25rem;
+            top: 3.88rem;
+            width: 3.33rem;
+            height: 3.33rem;
+            border-radius: 50%;
+        }
+    }
+    .my_but1,
+    .my_but2 {
+        position: absolute;
+        width: 42%;
+        height: 3.92rem;
+        top: 1.25rem;
+    }
+    .my_but1 {
+        left: 6%;
+        border-radius: 4px;
+    }
+    .my_but2 {
+        right: 6%;
+        border-radius: 4px;
+    }
+    .my_item {
+        margin-top: 0;
+        height: 4.17rem;
+        .label-ios {
+            font-size: 1.25rem;
+        }
+        ion-avatar {
+            width: 1.5rem;
+            height: 1.5rem;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .note-ios {
+            font-family: PingFangSC-Regular;
+            font-size: 1.17rem;
+            letter-spacing: 0;
+        }
+    }
+    .bill {
+        width: 100%;
+        height: 8rem;
+        position: relative;
+        img {
+            position: absolute;
+            left: 0.83rem;
+            top: 1.04rem;
+            width: 1.33rem;
+            height: 1.33rem;
+        }
+        .p1 {
+            position: absolute;
+            left: 2.58rem;
+            top: 0.83rem;
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            letter-spacing: 0;
+        }
+        .p2 {
+            padding-top: 1.25rem;
+            text-align: center;
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            letter-spacing: 0;
+        }
+        .p3 {
+            text-align: center;
+            padding-top: 0.83rem;
+            font-weight: 600;
+            font-family: PingFangSC-Medium;
+            font-size: 2rem;
+            letter-spacing: 0;
+        }
+        table {
+            position: absolute;
+            width: 45%;
+            right: 0.83rem;
+            top: 3.8rem;
+            tr {
+                height: 2rem;
+                position: relative;
+                td {
+                    font-family: PingFangSC-Regular;
+                    font-size: 1.25rem;
+                    color: #333333;
+                    letter-spacing: 0;
+                }
+                td:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

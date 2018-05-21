@@ -1,0 +1,131 @@
+page-delegation {
+    .wrap {
+        width: 92%;
+        margin: 0 auto;
+        margin-top: 0.83rem;
+        position: relative;
+        box-shadow: 0 4px 0.8rem 0 rgba(204, 204, 204, 0.50);
+        border-radius: 0.3rem;
+        .item_tit {
+            width: 100%;
+            height: 3.33rem;
+            position: relative;
+            padding: 0 1.25rem;
+            border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+            .p3 {
+                position: absolute;
+                right: 1.25rem;
+                top: 1.24rem;
+                font-family: PingFangSC-Medium;
+                font-size: 1.2rem;
+                color: #3AA0F6;
+                letter-spacing: 0;
+            }
+            .p2 {
+                position: absolute;
+                top: 1.04rem;
+                right: 1.25rem;
+                font-family: PingFangSC-Regular;
+                font-size: 1.25rem;
+                letter-spacing: 2px;
+            }
+            .p1 {
+                font-family: PingFangSC-Regular;
+                font-size: 1.25rem;
+                color: #999999;
+                letter-spacing: 0;
+                position: absolute;
+                left: 1.25rem;
+                top: 1.04rem;
+            }
+            .p0 {
+                position: absolute;
+                left: 1.25rem;
+                top: 1.04rem;
+                font-family: PingFangSC-Medium;
+                font-size: 1.5rem;
+                color: #333333;
+                letter-spacing: 0;
+                font-weight: bold;
+                em {
+                    font-style: normal;
+                    font-family: PingFangSC-Regular;
+                    font-size: 1.2rem;
+                    color: #999999;
+                    letter-spacing: 0;
+                    font-weight: normal;
+                }
+            }
+        }
+        .item1 {
+            p {
+                padding-left: 1.25rem;
+                font-weight: bold;
+            }
+        }
+        .item_tit1 {
+            border-bottom: none;
+            height: 2.33rem;
+            .p1,
+            .p2 {
+                top: 0.54rem;
+                color: #999999;
+            }
+        }
+        .item2 {
+            width: 100%;
+            height: 2.33rem;
+            position: relative;
+            padding: 0 1.25rem;
+            .p1 {
+                font-family: PingFangSC-Regular;
+                font-size: 0.5rem;
+                color: #999999;
+                letter-spacing: 2px;
+                line-height: 2.33rem;
+                position: absolute;
+                left: 1.25rem;
+            }
+            .p2 {
+                font-family: PingFangSC-Regular;
+                font-size: 1rem;
+                color: #999999;
+                letter-spacing: 2px;
+                line-height: 2.33rem;
+                position: absolute;
+                right: 1.25rem;
+            }
+            .p3 {
+                color: #DF3F43;
+            }
+        }
+        .item3 {
+            width: 100%;
+            padding: 2rem 1.25rem 1.25rem 1.25rem;
+            p {
+                font-family: PingFangSC-Regular;
+                font-size: 1rem;
+                color: #DF3F43;
+                letter-spacing: 0;
+                line-height: 2.33rem;
+            }
+        }
+        .but {
+            width: 8.33rem;
+            height: 3.33rem;
+            position: absolute;
+            top: 10.42rem;
+            right: 0.83rem;
+            border-radius: 0.3rem;
+            color: white;
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            background-image: linear-gradient(45deg, #6FD9FF 0%, #6DB3FF 100%);
+        }
+        .but.activated {
+            background-image: linear-gradient(45deg, #4ac9f7 0%, #3c90eb 100%);
+        }
+    }
+}

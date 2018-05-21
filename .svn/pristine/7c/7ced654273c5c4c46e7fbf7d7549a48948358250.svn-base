@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            帮助与服务
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <a ion-item id='phone'>
+        <img class="cs_icon" src="assets/images/service/service_icon_phone@{{dpr}}x.png" item-start>
+        <ion-label>客服电话</ion-label>
+        <ion-note item-end class="cs_note">{{phone}}</ion-note>
+    </a>
+    <ion-item class='noline_item'>
+        <img class="cs_icon" src="assets/images/service/service_icon_online@{{dpr}}x.png" item-start> 常见问题
+    </ion-item>
+    <div class='item_wrap' *ngFor='let x of listData'>
+        <ion-item (click)='showCont(x)'>
+            <img class="cs_icon cc_icon" *ngIf='x.show' src="assets/images/service/icon_up@{{dpr}}x.png" item-end>
+            <img class="cs_icon cc_icon" *ngIf='!x.show' src="assets/images/service/icon_down@{{dpr}}x.png" item-end> {{x.title}}
+        </ion-item>
+        <div class='in_wrap' *ngIf='x.show' padding [innerHtml]="x.html">
+        </div>
+    </div>
+
+</ion-content>

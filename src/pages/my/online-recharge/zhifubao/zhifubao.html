@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-item>
+        <ion-label color="dark">转入金额：</ion-label>
+        <ion-input disabled style="font-size:1.25rem" type="text" [value]="money"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="dark">真实姓名：</ion-label>
+        <ion-input [value]="name" disabled style="font-size:1.25rem" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="dark">支付宝账号：</ion-label>
+        <ion-input [(ngModel)]="account" placeholder="请输入支付宝账号" style="font-size:1.25rem" type="text"></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <button ion-button block (click)="sub()" style="margin:0 auto;width:92%;height:3.33rem;" [disabled]="!account">下一步</button>
+
+</ion-content>
+<ion-footer class='footer'>
+    <p (click)="orderRecoder()">入金申请记录</p>
+</ion-footer>

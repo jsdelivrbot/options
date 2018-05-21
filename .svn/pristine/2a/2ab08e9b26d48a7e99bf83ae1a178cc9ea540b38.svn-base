@@ -1,0 +1,17 @@
+page-use-rules {
+    .scroll-content {
+        padding: 1.25rem;
+        h4 {
+            font-family: PingFangSC-Medium;
+            font-size: 1.25rem;
+            color: #DF3F43;
+            letter-spacing: 2px;
+        }
+        p {
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+            line-height: 1.75rem;
+        }
+    }
+}

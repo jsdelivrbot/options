@@ -1,0 +1,25 @@
+page-self-info {
+    em,
+    strong {
+        font-style: normal!important;
+        font-weight: normal!important;
+    }
+    em {
+        font-family: PingFangSC-Regular;
+        font-size: 1.25rem;
+        letter-spacing: 2px;
+    }
+    strong {
+        font-family: PingFangSC-Regular;
+        font-size: 1.17rem;
+        color: #999999;
+        letter-spacing: 1.87px;
+    }
+    .info_img {
+        width: 4.17rem!important;
+        height: 4.17rem!important;
+    }
+    .nt {
+        height: 1.25rem;
+    }
+}

@@ -1,0 +1,148 @@
+//------------------------自定义tabs图标----------------------------//
+@font-face {
+    font-family: "Ionicons";
+    src: url('../assets/font/fonts/Ionicons.eot');
+    src: url('../assets/font/fonts/Ionicons.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../assets/font/fonts/Ionicons.woff') format('woff'), /* chrome, firefox */
+    url('../assets/font/fonts/Ionicons.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../assets/font/fonts/Ionicons.svg#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.ion-md-home-outline:before {
+    content: "\e904";
+    color: #999;
+}
+
+.ion-ios-home-outline:before {
+    content: "\e904";
+    color: #999;
+}
+
+.ion-md-home:before {
+    content: "\e904";
+    color: #3AA0F6;
+}
+
+.ion-ios-home:before {
+    content: "\e904";
+    color: #3AA0F6;
+}
+
+.ion-md-my-outline:before {
+    content: "\e906";
+    color: #999;
+}
+
+.ion-ios-my-outline:before {
+    content: "\e906";
+    color: #999;
+}
+
+.ion-md-my:before {
+    content: "\e906";
+    color: #3AA0F6;
+}
+
+.ion-ios-my:before {
+    content: "\e906";
+    color: #3AA0F6;
+}
+
+.ion-md-follow-outline:before {
+    content: "\e901";
+    color: #999;
+}
+
+.ion-ios-follow-outline:before {
+    content: "\e901";
+    color: #999;
+}
+
+.ion-md-follow:before {
+    content: "\e901";
+    color: #3AA0F6;
+}
+
+.ion-ios-follow:before {
+    content: "\e901";
+    color: #3AA0F6;
+}
+
+.ion-md-trade-outline:before {
+    content: "\e902";
+    color: #999;
+}
+
+.ion-ios-trade-outline:before {
+    content: "\e902";
+    color: #999;
+}
+
+.ion-md-trade:before {
+    content: "\e902";
+    color: #3AA0F6;
+}
+
+.ion-ios-trade:before {
+    content: "\e902";
+    color: #3AA0F6;
+}
+
+.ion-md-live-outline:before {
+    content: "\e903";
+    color: #999;
+}
+
+.ion-ios-live-outline:before {
+    content: "\e903";
+    color: #999;
+}
+
+.ion-md-live:before {
+    content: "\e903";
+    color: #3AA0F6;
+}
+
+.ion-ios-live:before {
+    content: "\e903";
+    color: #3AA0F6;
+}
+
+.ion-md-subscription-outline:before {
+    content: "\e901";
+    color: #999;
+}
+
+.ion-ios-subscription-outline:before {
+    content: "\e901";
+    color: #999;
+}
+
+.ion-md-subscription:before {
+    content: "\e901";
+    color: #3AA0F6;
+}
+
+.ion-ios-subscription:before {
+    content: "\e901";
+    color: #3AA0F6;
+}
+
+page-Tabs {
+    .tabs-md .tab-button {
+        color: #999999;
+        min-height: 4rem!important;
+    }
+    .tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text {
+        margin-top: 0;
+        margin-bottom: 0;
+        position: relative;
+        top: -4px;
+    }
+    .tabs-md .tab-button-icon {
+        margin-top: 8px;
+        min-width: 2rem;
+        font-size: 2rem;
+    }
+}

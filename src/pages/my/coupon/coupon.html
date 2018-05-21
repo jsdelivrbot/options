@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>我的优惠券</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="tip">
+        <div></div>
+        <div></div>
+        <p [navPush]="userules">
+            使用规则
+            <ion-icon style="font-size:1.5rem;position:relative;top:0.2rem;" name="ios-help-circle-outline"></ion-icon>
+        </p>
+    </div>
+    <div class="coupon" *ngFor="let coupon of datas">
+        <p class="p1">
+            {{coupon.couponName}}
+        </p>
+        <p class="p2">
+            有效期至:{{coupon.validPeriod }}
+        </p>
+        <p class="p3">
+            {{coupon.remark}}
+        </p>
+        <p class="p4">
+            <em>￥</em>{{coupon.faceValue }}
+        </p>
+    </div>
+    <div class="coupon">
+        <p class="p1">
+            名字
+        </p>
+        <p class="p2">
+            有效期至:啊是大大撒大苏打大苏打实打实的啊实打实大苏打撒旦
+        </p>
+        <p class="p3">
+            remark
+        </p>
+        <p class="p4">
+            <em>￥</em>100<br>
+        </p>
+        <p class="p5">
+            满300使用
+        </p>
+    </div>
+    <div *ngIf="!datas">
+        <img style="width:20%;margin-left:40%;margin-top:45%;" src="assets/images/my/details_nodate@{{dpr}}x.png">
+        <p style="text-align:center;font-family: PingFangSC-Regular;margin-top:1.25rem;font-size: 1.25rem;color: #CCCCCC;letter-spacing: 2px;">暂无优惠券</p>
+    </div>
+
+</ion-content>

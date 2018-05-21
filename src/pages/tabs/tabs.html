@@ -1,0 +1,6 @@
+<ion-tabs #mainTabs class="tabs-md" selectedIndex="0" (ionChange)="tabchange($event)">
+    <ion-tab [root]="tab1Root" tabTitle="首页" tabIcon="home"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="申购" tabIcon="subscription"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="交易" tabIcon="trade"></ion-tab>
+    <ion-tab [root]="tab4Root" tabTitle="我的" tabIcon="my"></ion-tab>
+</ion-tabs>

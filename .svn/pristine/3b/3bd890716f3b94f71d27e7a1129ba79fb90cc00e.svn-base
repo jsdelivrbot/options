@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>修改登录密码</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <form [formGroup]="passwordForm" (ngSubmit)="conformit(passwordForm.value)">
+        <ion-item style="font-size:1.25rem;margin:0.85rem 0;">
+            <ion-label color="dark">原登录密码</ion-label>
+            <ion-input formControlName="oldpassword" placeholder="请输入原登录密码" type="password"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.oldpassword.valid && passwordForm.controls.oldpassword.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!passwordForm.controls.oldpassword.valid && passwordForm.controls.oldpassword.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <ion-item style="font-size:1.25rem;">
+            <ion-label color="dark">新登录密码</ion-label>
+            <ion-input formControlName="newpassword" placeholder="请输入8-20位包含数字和字母的密码" type="password"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.newpassword.valid && passwordForm.controls.newpassword.dirty" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="!passwordForm.controls.newpassword.valid && passwordForm.controls.newpassword.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <ion-item style="font-size:1.25rem;">
+            <ion-label color="dark">确认密码&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+            <ion-input formControlName="confirmpassword" placeholder="请输入确认密码" type="password"></ion-input>
+            <ion-icon *ngIf="passwordForm.controls.confirmpassword.valid && passwordForm.controls.confirmpassword.dirty&&passwordForm.controls.newpassword.value==passwordForm.controls.confirmpassword.value" item-end name="ios-checkmark-circle" style="color:#51C332"></ion-icon>
+            <ion-icon *ngIf="(!passwordForm.controls.confirmpassword.valid||passwordForm.controls.newpassword.value!=passwordForm.controls.confirmpassword.value)&&passwordForm.controls.confirmpassword.dirty" item-end name="ios-close-circle" style="color:red"></ion-icon>
+        </ion-item>
+        <br>
+        <br>
+        <button ion-button block type="submit" style="margin:0 4%;width:92%;" [disabled]="!passwordForm.valid||submitted||passwordForm.controls.newpassword.value!=passwordForm.controls.confirmpassword.value">确定</button>
+    </form>
+</ion-content>

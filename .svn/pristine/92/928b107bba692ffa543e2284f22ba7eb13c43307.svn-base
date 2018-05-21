@@ -1,0 +1,26 @@
+<ion-content>
+    <div class="wrap div_bgcolor" *ngFor="let x of holdData;let i=index;">
+        <div class="item_tit">
+            <p class="p0 ">BTC&nbsp;&nbsp;&nbsp;&nbsp;<em>单号：{{x.id }}</em></p>
+        </div>
+        <div class="item_tit item_tit1">
+            <p class="p1" [ngClass]="{'font_green': x.orderDirName=='买入开仓'||x.orderDirName=='买入平仓', 'font_red':x.orderDirName=='卖出开仓'||x.orderDirName!='卖出平仓'}">{{x.orderDirName }}{{x.orderAmount }}手</p>
+        </div>
+        <div class="item_tit item_tit1">
+            <p class="p2">成交数量：{{x.dealAmount }}</p>
+            <p class="p1" *ngIf="x.orderPrice!=0">委托价：{{x.orderPrice}}</p>
+            <p class="p1" *ngIf="x.orderPrice==0">委托价：市价</p>
+        </div>
+        <div class="item2">
+            <p class="p1">委托时间：<br>{{x.dateTime }}</p>
+        </div>
+        <div class="item3">
+            <p>*当本笔交易结算后，保证金与获利将统一转入资金账户</p>
+        </div>
+        <button class="but" (click)="undo(x,i)">撤单</button>
+    </div>
+    <div *ngIf="noData">
+        <img style="width:20%;margin-left:40%;margin-top:35%;" src="assets/images/my/nothing_img@{{dpr}}x.png">
+        <p style="text-align:center;font-family: PingFangSC-Regular;margin-top:1.25rem;font-size: 1.25rem;color: #CCCCCC;letter-spacing: 2px;">暂无数据</p>
+    </div>
+</ion-content>

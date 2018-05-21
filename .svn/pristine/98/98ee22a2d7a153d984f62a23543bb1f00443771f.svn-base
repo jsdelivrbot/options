@@ -1,0 +1,54 @@
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="正在刷新..."></ion-refresher-content>
+    </ion-refresher>
+    <div class="wrap div_bgcolor" *ngFor='let x of data'>
+        <div class="item_tit">
+            <p class="p1 th_light"><strong>{{x.stockName}}{{x.stockCode}}</strong></p>
+            <p class="p2 th_light"><em>单号:{{x.orderId}}</em></p>
+        </div>
+        <table>
+            <tr>
+                <td><span></span>&nbsp;&nbsp;{{x.holdStatus}}</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>名义本金</td>
+                <td>{{x.principal}}</td>
+            </tr>
+            <tr>
+                <td>权利金</td>
+                <td>{{x.expense}}</td>
+            </tr>
+            <tr>
+                <td>买入价</td>
+                <td>{{x.price}}</td>
+            </tr>
+            <tr>
+                <td>行权周期</td>
+                <td>{{x.duration}}</td>
+            </tr>
+            <tr>
+                <td>到期日期</td>
+                <td>{{x.endDate}}</td>
+            </tr>
+            <tr>
+                <td>申购时间</td>
+                <td>{{x.startDate}}</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div *ngIf="noData">
+        <img style="width:20%;margin-left:40%;margin-top:35%;" src="assets/images/my/nothing_img@{{dpr}}x.png">
+        <p style="text-align:center;font-family: PingFangSC-Regular;margin-top:1.25rem;font-size: 1.25rem;color: #CCCCCC;letter-spacing: 2px;">暂无数据</p>
+    </div>
+    <div class="bot_line" *ngIf="showline">
+        <p>-----------------&nbsp;&nbsp;别扯了，我也是有底线的&nbsp;&nbsp;-----------------</p>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingText="正在加载" loadingSpinner="bubbles" threshold="2rem"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

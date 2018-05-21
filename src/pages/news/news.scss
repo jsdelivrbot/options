@@ -1,0 +1,16 @@
+page-Tabs {
+    .tab-badge {
+        right: 10%!important;
+    }
+    page-news {
+        .tabbar {
+            opacity: 1!important;
+            // height: 3.4rem!important;
+            // min-height: 3.4rem!important;
+            // max-height: 3.4rem!important;
+        }
+        .tabs-ios .tab-button[aria-selected=true] {
+            border-bottom: 2px solid #DF3F43!important;
+        }
+    }
+}

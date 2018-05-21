@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\org.apache.cordova\CordovaLib\6.2.3\release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="69c20ef9399dbf427537ee0c9a5ebb29ed5aa6c6">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\CordovaLib-6.2.3-release_430e509ced84280852776f1528d34a04fd7df755.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\com.android.support-support-v4-26.0.0-alpha1_98a4cd2e0c4592e289bad6a8d9a063bb3efc07f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\com.android.support-support-core-ui-26.0.0-alpha1_ff2c848a50eb0a10fc47dd09c8261568350c4747.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\com.android.support-support-media-compat-26.0.0-alpha1_4026d4c061855805ea87618dfc65ff2478d751fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\androidsdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\support-annotations-26.0.0-alpha1_2f8e81490599c66fd1760533e89d3d44b74cbac1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\com.android.support-support-compat-26.0.0-alpha1_44f4c77be6fe5b09c731dcadbddd0dc7448133f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\org.apache.cordova\CordovaLib\6.2.3\debug\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7a1530ac850543228ac856fe951d258efe29f918">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-6.2.3-debug_2ab01cbbb70a9d4ab529268a3560d55554e1184b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\libs\jcore-android-1.1.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d36b4154d952a6f18fd438469929820a6e598127">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\jcore-android-1.1.9_f56b165a61333e810a7be4a0ad7db027e3ba7e61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\com.android.support-support-core-utils-26.0.0-alpha1_6c8409e665c4023271d4d264e3ae381c76ebe17b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\libs\sqlite-connector.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="76169ab23a4f939925491c6fe186749da5a56ee9">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\sqlite-connector_d7928382f9579303dc02a6eca89a5f6485ae4b24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\74274\Desktop\Options\platforms\android\build\intermediates\pre-dexed\release\com.android.support-support-fragment-26.0.0-alpha1_c0514bd0e3b5b2fc3e3c0515658141bb6fde3390.jar" />
+    </item>
+
+</items>

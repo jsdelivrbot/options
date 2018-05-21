@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Ionicons';
+  src:  url('fonts/Ionicons.eot?r6t8m9');
+  src:  url('fonts/Ionicons.eot?r6t8m9#iefix') format('embedded-opentype'),
+    url('fonts/Ionicons.ttf?r6t8m9') format('truetype'),
+    url('fonts/Ionicons.woff?r6t8m9') format('woff'),
+    url('fonts/Ionicons.svg?r6t8m9#Ionicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ion-"], [class*=" ion-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Ionicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ion-home_btn_buy_nor:before {
+  content: "\e900";
+  color: #ccc;
+}
+.ion-home_btn_buy_pre:before {
+  content: "\e901";
+}
+.ion-home_btn_deal_nor:before {
+  content: "\e902";
+  color: #ccc;
+}
+.ion-home_btn_deal_pre:before {
+  content: "\e903";
+}
+.ion-home_btn_home_nor:before {
+  content: "\e904";
+  color: #ccc;
+}
+.ion-home_btn_home_pre:before {
+  content: "\e905";
+}
+.ion-home_btn_my_nor:before {
+  content: "\e906";
+  color: #ccc;
+}
+.ion-home_btn_my_pre:before {
+  content: "\e907";
+}

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>我的跟单</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="tm_wrap">
+        <div>
+            <img class="avatar" src="assets/images/my/my_icon_details@{{dpr}}x.png">
+            <div class="author_wrap">
+                <p class="author">张老师</p>
+                <img class="vip" src="assets/images/home/home_earnings_icon_blue@{{dpr}}x.png">
+                <img class="level" src="assets/images/track/documentary_icon_50@{{dpr}}x.png">
+            </div>
+            <p class="track_num">单号：87890013</p>
+        </div>
+        <div>
+            <p class="p1">净持仓跟单</p>
+            <p class="p2">2017-11-24 10:51:09</p>
+            <p class="p3">*当本次跟单结算后，保证金与获利将统一转入资金账户</p>
+            <button ion-button (click)="stopTrack()">停止跟单</button>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td>买涨三手</td>
+            <td>2017-11-25 10:13:08</td>
+        </tr>
+        <tr>
+            <td>跟单价：55.81</td>
+            <td>止盈：21300.00</td>
+        </tr>
+        <tr>
+            <td>综合费：504.00</td>
+            <td>止损：4320.00</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>买涨三手</td>
+            <td>2017-11-25 10:13:08</td>
+        </tr>
+        <tr>
+            <td>跟单价：55.81</td>
+            <td>止盈：21300.00</td>
+        </tr>
+        <tr>
+            <td>综合费：504.00</td>
+            <td>止损：4320.00</td>
+        </tr>
+    </table>
+</ion-content>

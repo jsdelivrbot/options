@@ -1,0 +1,16 @@
+<div class="wrap">
+    <div class="choose_wrap">
+        <p *ngIf="datas.length!=0">优惠券</p>
+        <p *ngIf="datas.length==0">暂无优惠券</p>
+        <div class="in_wrap">
+            <div class="_item" tappable (click)="choose(i,x)" *ngFor="let x of datas;let i=index">
+                <p *ngIf="x.couponType ==1">￥&nbsp;&nbsp;{{x.faceValue}}</p>
+                <p *ngIf="x.couponType ==2">{{x.faceValue*10}}&nbsp;&nbsp;折</p>
+                <p class="p1">{{x.couponName}}</p>
+                <ion-icon name="ios-radio-button-off" class="_icon" *ngIf="Index_but!=i"></ion-icon>
+                <ion-icon name="ios-checkmark-circle" style="color:#DF3F43" *ngIf="Index_but==i" class="_icon"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <button ion-button class="but" (click)="closeCouponModal();$event.preventDefault();$event.stopPropagation();">确定</button>
+</div>

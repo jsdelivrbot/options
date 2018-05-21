@@ -1,0 +1,29 @@
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="正在刷新..."></ion-refresher-content>
+    </ion-refresher>
+    <div class="nt"></div>
+    <div class="wrap" *ngFor="let hero of data">
+        <img src="assets/images/info/icon_dot@{{dpr}}x.png" class="top_point">
+        <img src="assets/images/info/icon_dot@{{dpr}}x.png" class="bot_point">
+        <div class="time1 div_bgcolor" *ngIf="hero.month!=''">
+            <p>{{hero.day}}</p>
+            <p>{{hero.month}}</p>
+        </div>
+        <div class="time2 ">
+            <p>{{hero.sec}}</p>
+        </div>
+        <div class="line"></div>
+        <p class="th_gray_spec" [ngClass]="hero.month==''?'font_black':'font_red'">{{hero.title}}</p>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingText="正在加载" loadingSpinner="bubbles" threshold="2rem"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <div class="bot_line" *ngIf="showline">
+        <p>-----------------&nbsp;&nbsp;别扯了，我也是有底线的&nbsp;&nbsp;-----------------</p>
+    </div>
+    <div *ngIf="showit">
+        <img style="width:20%;margin-left:40%;margin-top:35%;" src="assets/images/track/documentary_popup_icon_lack@{{dpr}}x.png">
+        <p style="text-align:center;font-family: PingFangSC-Regular;margin-top:1.25rem;font-size: 1.25rem;color: #CCCCCC;letter-spacing: 2px;">暂无数据</p>
+    </div>
+</ion-content>

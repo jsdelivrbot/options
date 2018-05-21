@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>入金申请</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class='card' *ngIf="showTab=='支付宝'">
+        <p>提示：若未打开支付宝，请手动保存二维码转账</p>
+        <img [src]="data1.alipayQRcode">
+        <p style="color:black;">{{data1.alipayName}}</p>
+        <p>或直接转入支付宝账户：{{data1.alipayName}}{{data1.alipayAccount}}</p>
+    </div>
+    <div *ngIf="showTab=='银行卡'">
+        <ion-item>
+            <ion-label color="dark">银行名称：</ion-label>
+            <ion-input disabled style="font-size:1.25rem" type="text" [value]="data2.bankName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="dark">开户名：&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+            <ion-input disabled style="font-size:1.25rem" type="text" [value]="data2.accountName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="dark">开户行：&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>
+            <ion-input disabled style="font-size:1.25rem" type="text" [value]="data2.bankAccount"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="dark">银行卡号：</ion-label>
+            <ion-input disabled style="font-size:1.25rem" type="text" [value]="data2.bankCardNumber"></ion-input>
+        </ion-item>
+    </div>
+    <br>
+    <br>
+    <button ion-button block (click)="sub()" style="margin:0 auto;width:92%;height:3.33rem;" [disabled]="isSigned">标记已付款</button>
+    <br>
+    <br>
+    <button ion-button block *ngIf="showTab=='支付宝'" (click)="openZFB()" style="margin:0 auto;width:92%;height:3.33rem;">打开支付宝</button>
+    <br>
+    <br>
+    <p>温馨提示：</p>
+    <p style="color:red;"> 1.请转账时备注您的手机号{{globalData.account}}，务必填写正确，方便及时入账</p>
+    <p>2.为了保证您的资金安全，您的账户资金将由第三方银行托管</p>
+    <p>3.充值前请注意您的银行卡充值限制，以免造成不便</p>
+    <p>4.请确保信息无误再转账，若信息填写有误，该不负责</p>
+    <p>5.若重复提交信息，则会导致信息出错，请勿重复提交</p>
+    <p>6.如果充值遇到任何问题，请联系客服</p>
+    <iframe src="" style="width:0;height: 0;" id='payIframe' frameborder="0" width="0" height="0"></iframe>
+</ion-content>

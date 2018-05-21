@@ -1,0 +1,43 @@
+page-withdraw {
+    .item-ios {
+        padding-left: 0!important;
+    }
+    .wd_p {
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 1rem;
+        color: #999999;
+        letter-spacing: 2px;
+    }
+    .wd_top {
+        width: 92%;
+        height: 6.67rem;
+        margin: 0.83rem auto;
+        box-shadow: 0 4px 20px 0 rgba(204, 204, 204, 0.50);
+        border-radius: 0.3rem;
+        text-align: center;
+        p:first-child {
+            font-family: PingFangSC-Regular;
+            font-size: 1.25rem;
+            color: #999999;
+            letter-spacing: 0;
+            line-height: 2rem;
+            padding-top: 1.2rem;
+        }
+        p:last-child {
+            font-family: PingFangSC-Medium;
+            font-size: 1.67rem;
+            color: #333333;
+            letter-spacing: 0;
+            font-weight: bold;
+            line-height: 2.8rem;
+        }
+    }
+    .draw_type {
+        input[disabled],
+        input:disabled {
+            opacity: 1;
+            color: #999999;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-appminimize": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-file-opener2": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-ionic-keyboard": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-ionic-webview": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "cordova-plugin-jcore": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.midukeji.qiquan"
+        }
+    }
+}

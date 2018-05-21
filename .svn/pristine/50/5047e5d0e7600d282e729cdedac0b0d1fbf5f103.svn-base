@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_next_item.png",
+        "source": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\res\\drawable-hdpi\\ic_action_next_item.png"
+    },
+    {
+        "merged": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jpush_ic_richpush_actionbar_back.png",
+        "source": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\res\\drawable-hdpi\\jpush_ic_richpush_actionbar_back.png"
+    },
+    {
+        "merged": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_previous_item.png",
+        "source": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\res\\drawable-hdpi\\ic_action_previous_item.png"
+    },
+    {
+        "merged": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\jpush_ic_richpush_actionbar_divider.png",
+        "source": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\res\\drawable-hdpi\\jpush_ic_richpush_actionbar_divider.png"
+    },
+    {
+        "merged": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_remove.png",
+        "source": "C:\\Users\\74274\\Desktop\\Options\\platforms\\android\\res\\drawable-hdpi\\ic_action_remove.png"
+    }
+]

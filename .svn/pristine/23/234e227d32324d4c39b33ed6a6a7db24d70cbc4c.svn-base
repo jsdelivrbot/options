@@ -1,0 +1,51 @@
+{
+  "_from": "@ionic-native/file-transfer@^4.5.3",
+  "_id": "@ionic-native/file-transfer@4.5.3",
+  "_inBundle": false,
+  "_integrity": "sha1-CkVZdNyzvqj6hu9md7sLTl28XtY=",
+  "_location": "/@ionic-native/file-transfer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@ionic-native/file-transfer@^4.5.3",
+    "name": "@ionic-native/file-transfer",
+    "escapedName": "@ionic-native%2ffile-transfer",
+    "scope": "@ionic-native",
+    "rawSpec": "^4.5.3",
+    "saveSpec": null,
+    "fetchSpec": "^4.5.3"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/@ionic-native/file-transfer/download/@ionic-native/file-transfer-4.5.3.tgz",
+  "_shasum": "0a455974dcb3bea8fa86ef6677bb0b4e5dbc5ed6",
+  "_spec": "@ionic-native/file-transfer@^4.5.3",
+  "_where": "C:\\Users\\74274\\Desktop\\Options",
+  "author": {
+    "name": "ionic"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/ionic-native/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Ionic Native - Native plugins for ionic apps",
+  "homepage": "https://github.com/ionic-team/ionic-native#readme",
+  "license": "MIT",
+  "module": "index.js",
+  "name": "@ionic-native/file-transfer",
+  "peerDependencies": {
+    "@ionic-native/core": "^4.2.0",
+    "@angular/core": "*",
+    "rxjs": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/ionic-native.git"
+  },
+  "typings": "index.d.ts",
+  "version": "4.5.3"
+}

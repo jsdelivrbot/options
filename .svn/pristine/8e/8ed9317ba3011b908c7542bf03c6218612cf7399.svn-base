@@ -1,0 +1,51 @@
+{
+  "_from": "@ionic-native/toast",
+  "_id": "@ionic-native/toast@4.5.3",
+  "_inBundle": false,
+  "_integrity": "sha1-ZVwX1J3ouOtVN6Er6RixFnu2J3k=",
+  "_location": "/@ionic-native/toast",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@ionic-native/toast",
+    "name": "@ionic-native/toast",
+    "escapedName": "@ionic-native%2ftoast",
+    "scope": "@ionic-native",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/@ionic-native/toast/download/@ionic-native/toast-4.5.3.tgz",
+  "_shasum": "655c17d49de8b8eb5537a12be918b1167bb62779",
+  "_spec": "@ionic-native/toast",
+  "_where": "C:\\Users\\74274\\Desktop\\Options",
+  "author": {
+    "name": "ionic"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/ionic-native/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Ionic Native - Native plugins for ionic apps",
+  "homepage": "https://github.com/ionic-team/ionic-native#readme",
+  "license": "MIT",
+  "module": "index.js",
+  "name": "@ionic-native/toast",
+  "peerDependencies": {
+    "@ionic-native/core": "^4.2.0",
+    "@angular/core": "*",
+    "rxjs": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/ionic-native.git"
+  },
+  "typings": "index.d.ts",
+  "version": "4.5.3"
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover">
+    <title>充值</title>
+</head>
+<style>
+    input {
+        width: 0;
+        height: 0;
+        border: none;
+    }
+</style>
+
+<body style='text-align:center;'>
+    <form action="" method="POST" id="form">
+        <input type="submit" id="submit" value="确定充值">
+    </form>
+    <script>
+        let temp = JSON.parse(localStorage.newPay2);
+        console.log(temp)
+        for (let i in temp) {
+            if (i == 'postAction') {
+                document.getElementById('form').action = temp[i];
+            } else {
+                let tempNode = document.createElement('input');
+                tempNode.setAttribute('name', i);
+                tempNode.setAttribute('value', temp[i]);
+                document.getElementById('form').appendChild(tempNode);
+            }
+        }
+        document.getElementById('submit').click();
+    </script>
+</body>
+
+</html>

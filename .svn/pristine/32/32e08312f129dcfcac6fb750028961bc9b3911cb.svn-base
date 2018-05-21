@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>提现</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="wd_top">
+        <p>账户可用余额</p>
+        <p>￥{{globalData.funds}}</p>
+    </div>
+    <ion-item style="font-size:1.25rem;" detail-push (click)="presentActionSheet()">
+        <ion-label color="dark">&nbsp;&nbsp;&nbsp;提现方式</ion-label>
+        <ion-input class="draw_type" [(ngModel)]="bank" placeholder="{{bank}}" disabled type="text"></ion-input>
+    </ion-item>
+    <ion-item style="font-size:1.25rem;margin:0.8rem 0;">
+        <ion-label color="dark">&nbsp;&nbsp;&nbsp;提现金额</ion-label>
+        <ion-input [(ngModel)]="money" placeholder="请输入金额" type="number"></ion-input>
+        <span item-end>元</span>
+    </ion-item>
+    <ion-item style="font-size:1.25rem;">
+        <ion-label color="dark">&nbsp;&nbsp;&nbsp;提现密码</ion-label>
+        <ion-input [(ngModel)]="password" placeholder="请输入提现密码" type="password"></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <button ion-button block type="submit" style="margin:0 4%;width:92%;" (click)="withDraw()" [disabled]="!money||!bank||!password">确定</button>
+    <br>
+    <!-- <br>
+    <p class="wd_p">每日提现次数限2次</p>
+    <p class="wd_p">提现处理时间为8:00-17:00</p>
+    <p class="wd_p">到账时间以银行为准，节假日延后处理</p> -->
+</ion-content>

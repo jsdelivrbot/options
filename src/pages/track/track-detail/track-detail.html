@@ -1,0 +1,159 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>详情</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="td_wrap">
+        <img class="avatar" src="assets/images/my/my_icon_details@{{dpr}}x.png">
+        <p class="author">
+            {{data.nickname}}
+            <img class="vip" src="assets/images/home/home_earnings_icon_yellow@{{dpr}}x.png">
+        </p>
+        <img class="level" src="assets/images/track/documentary_icon_50@{{dpr}}x.png">
+        <table>
+            <tr>
+                <td>{{data.totalIncome }}</td>
+                <td>{{data.day7Income }}</td>
+                <td>{{data.profit}}万</td>
+            </tr>
+            <tr>
+                <td>总收益</td>
+                <td>七日收益</td>
+                <td>净利润</td>
+            </tr>
+        </table>
+        <p class="description">{{data.description}}</p>
+    </div>
+    <div class="td_tittle">
+        <img class="vip" src="assets/images/track/documentary_details_icon_2@{{dpr}}x.png">
+        <p>账户概述</p>
+    </div>
+    <table class="table1">
+        <tr>
+            <td>初始权益</td>
+            <td>{{data.initInterest}}万元</td>
+            <td>起始日期</td>
+            <td>{{data.startDate }}</td>
+        </tr>
+        <tr>
+            <td>最新权益</td>
+            <td>{{data.newInterest}}万元</td>
+            <td>最新数据</td>
+            <td>{{data.updateDate}}</td>
+        </tr>
+        <tr>
+            <td>累计净值</td>
+            <td>{{data.accumulatedNet}}万元</td>
+            <td>累计手续费</td>
+            <td>{{data.accumulatedFee}}</td>
+        </tr>
+        <tr>
+            <td>累计净利润</td>
+            <td>{{data.accumulatedProfit}}万元</td>
+            <td>交易周期</td>
+            <td>{{data.tradeCycle}}</td>
+        </tr>
+        <tr>
+            <td>交易笔数</td>
+            <td>{{data.tradeCount}}</td>
+            <td>盈利笔数</td>
+            <td>{{data.profitCount }}</td>
+        </tr>
+        <tr>
+            <td>亏损笔数</td>
+            <td>{{data.lossCount }}</td>
+            <td>平均每笔盈利</td>
+            <td>{{data.averageProfit}}</td>
+        </tr>
+        <tr>
+            <td>平均每笔亏损</td>
+            <td>{{data.averageLoss}}</td>
+            <td>平均每笔费用</td>
+            <td>{{data.averageCost}}</td>
+        </tr>
+        <tr>
+            <td>费用占比</td>
+            <td>{{data.costRatio }}</td>
+        </tr>
+    </table>
+    <div class="td_tittle">
+        <img class="vip" src="assets/images/track/documentary_details_icon_3@{{dpr}}x.png">
+        <p>盈利能力</p>
+    </div>
+    <table class="table1">
+        <tr>
+            <td>年化收益率</td>
+            <td>{{data.annualRate }}</td>
+            <td>累计收益率</td>
+            <td>{{data.accumulatedRate }}</td>
+        </tr>
+        <tr>
+            <td>当日收益率</td>
+            <td>{{data.dayRate }}</td>
+            <td>7日收益率</td>
+            <td>{{data.day7Rate }}</td>
+        </tr>
+        <tr>
+            <td>30日收益率</td>
+            <td>{{data.day30Rate }}</td>
+            <td>胜率</td>
+            <td>{{data.winningRate }}</td>
+        </tr>
+        <tr>
+            <td>盈亏比</td>
+            <td>{{data.profitLossRatio }}</td>
+            <td>连续盈利天数</td>
+            <td>{{data.continuousProfitDays }}</td>
+        </tr>
+    </table>
+    <div class="td_tittle">
+        <img class="vip" src="assets/images/track/documentary_details_icon_4@{{dpr}}x.png">
+        <p>稳定性</p>
+    </div>
+    <table class="table1">
+        <tr>
+            <td>最大回撤率</td>
+            <td>{{data.maxReturnRate }}</td>
+            <td>日最大赢利额</td>
+            <td>{{data.dayMaxProfit }}</td>
+        </tr>
+        <tr>
+            <td>日最大亏损额</td>
+            <td>{{data.dayMaxLoss }}</td>
+        </tr>
+    </table>
+    <div class="tip" *ngIf="showTip">
+        <img src="assets/images/my/my_icon_position@{{dpr}}x.png" tappable (click)="choose('third')">
+        <p class="p1">净持仓跟单</p>
+        <p>买涨和买跌相抵后的绝对值。例如：现在你持有BTC 买涨100手， 同时持有BTC买跌90手，你的净持仓就是100-90=10手</p>
+        <p class="p1">逐笔跟单</p>
+        <p>被跟牛人再次下单时跟单例如：现在你持有BTC 买涨100手， 同时持有BTC买跌90手，你的净持仓就是100-90=10手</p>
+    </div>
+</ion-content>
+<ion-footer>
+    <div class="foot_wrap">
+        <div>
+            <div tappable (click)="choose('first')">
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <img *ngIf="chooseState=='first'" src="assets/images/my/icon_dot_pre@{{dpr}}x.png">
+                    <img *ngIf="chooseState!='first'" src="assets/images/my/icon_dot_nor@{{dpr}}x.png"> &nbsp;&nbsp;净持仓跟单
+                </p>
+            </div>
+            <div tappable (click)="choose('second')">
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <img *ngIf="chooseState=='second'" src="assets/images/my/icon_dot_pre@{{dpr}}x.png">
+                    <img *ngIf="chooseState!='second'" src="assets/images/my/icon_dot_nor@{{dpr}}x.png"> &nbsp;&nbsp;逐笔跟单
+                </p>
+            </div>
+            <section tappable (click)="choose('third')">
+                <p><img src="assets/images/track/documentary_details_icon_explain@{{dpr}}x.png"></p>
+            </section>
+        </div>
+        <button (click)="track()">
+            跟单
+        </button>
+    </div>
+</ion-footer>
